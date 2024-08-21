@@ -1,5 +1,4 @@
-
-.chapter {
+  .chapter {
     width: 90%;
     height: auto;
     background-color: darkred;
@@ -12,6 +11,7 @@
     margin: 0;
     padding: 0;
   }
+
 
   .assistance-chapter {
     border-radius: 15px 15px 0 0;
@@ -50,6 +50,21 @@
   }
 
   .chapter-content {
+  }
+
+  
+  .extended-chapter {
+    display: flex;
+  }
+
+  .shortened-chapter {
     display: none;
   }
 
+  .chapter-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+  }

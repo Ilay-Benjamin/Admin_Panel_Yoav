@@ -3,16 +3,10 @@ import classNames from 'classnames';
 import { appDetails } from '../../../../config/app/app.config';
 import Page from '../../../../models/page';
 import { Item, ItemData } from './core/Item';
-import menuBarIcon from '../../../../assets/images/icons/menu-bar.png';
-import searchIcon from '../../../../assets/images/icons/search.png';
-import helpIcon from '../../../../assets/images/icons/help.png';
-import issueIcon from '../../../../assets/images/icons/issue.png';
-import clockIcon from '../../../../assets/images/icons/clock.png';
+
 import upArrowIcon from '../../../../assets/images/icons/up-arrow.png';
 import downArrowIcon from '../../../../assets/images/icons/down-arrow.png';
-import leftArrowIcon from '../../../../assets/images/icons/left-arrow.png';
-import rightArrowIcon from '../../../../assets/images/icons/right-arrow.png';
-import adminToolIcon from '../../../../assets/images/icons/admin-tool.png';
+
 
 import './../../../../assets/css/components/Slidebar/Chapter/style.Chapter.css';
 
@@ -144,25 +138,22 @@ const onToggleHandler = (isExtendedState) => {
 
 
 export function Chapter(props) {
-  const [isExtended, setIsExtended] = useState(props.isExtended);
-  const isExtendedState = new IsExtendedState(isExtended, setIsExtended);
   const chapterData = loadChapterData(props, isExtendedState);
-  const contentClassNames = classNames('chapter-content', (isExtendedState.get() ? 'extended-chapter' : 'shortened-chapter'));
   const chapterIcon = (isExtendedState.get() ? upArrowIcon : downArrowIcon);
   const itemComponentsList = Array.from(chapterData.items);
   const onToggleCallback = () => {
-   // onToggleHandler(isExtendedState);
+    onToggleHandler(isExtendedState);
     props.onToggle();
   }
   return (
     <div className={classNames('chapter')}>
       <div className={classNames('chapter-title')}>
         <p className={classNames("chapter-title-text")}>{ChapterData.title}</p>
-        <div className={classNames('chapter-expand-button')} onClick={(target) => onToggleHandler(isExtendedState)}>
+        <div className={classNames('chapter-expand-button')} onClick={onToggleCallback(isExtendedState)}>
           <img className='expand-image' src={chapterIcon} alt="" />
         </div>
       </div>
-      <div className={contentClassNames}>
+      <div className={classNames('chapter-content', (isExtendedState.get() ? 'extended-chapter' : 'shortened-chapter'))}>
         <ul>
             {itemComponentsList.map((itemData, index) => (
                 <Item 

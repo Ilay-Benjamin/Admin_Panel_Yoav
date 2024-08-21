@@ -5,15 +5,6 @@ import Page from '../../models/page';
 import { Item, ItemData } from './core/Chapter/core/Item';
 import { Chapter, ChapterData } from './core/Chapter/Chapter';
 import menuBarIcon from '../../assets/images/icons/menu-bar.png';
-import searchIcon from '../../assets/images/icons/search.png';
-import helpIcon from '../../assets/images/icons/help.png';
-import issueIcon from '../../assets/images/icons/issue.png';
-import clockIcon from '../../assets/images/icons/clock.png';
-import upArrowIcon from '../../assets/images/icons/up-arrow.png';
-import downArrowIcon from '../../assets/images/icons/down-arrow.png';
-import leftArrowIcon from '../../assets/images/icons/left-arrow.png';
-import rightArrowIcon from '../../assets/images/icons/right-arrow.png';
-import adminToolIcon from '../../assets/images/icons/admin-tool.png';
 import { chaptersList } from './core/SlidebarData';
 
 import './../../assets/css/components/Slidebar/style.Sidebar.css'; // Assuming you have styles for Sidebar
@@ -94,7 +85,14 @@ const onToggleHandler = (isOpenState) => {
 }
 
 const onToggleChapterHandler = (extendedChapterState, chapter) => {
-  SidebarActions.EXTENDED_CHAPTER.toggle(extendedChapterState, chapter);
+  if (!extendedChapterState.isEmpty() && extendedChapterState.isEquals(chapter)) {
+    extendedChapterState.set(null);
+  } else if (!extendedChapterState.isEmpty() && !extendedChapterState.isEquals(chapter)) {
+    extendedChapterState.set(chapter);
+  }
+  else {
+    extendedChapterState.set(chapter);
+  }
 }
 
 
@@ -105,7 +103,7 @@ function Sidebar(props) {
   const extendedChapterState = new ExtendedChapterState(extendedChapter, setExtendedChapter);
   const currentPage = props.currentPage
   const newChapterList = Array.from(chaptersList);
-
+  const on
   return (
     <div className={classNames('sidebar', 'open')}>
 
@@ -129,11 +127,18 @@ function Sidebar(props) {
                 items={chapterData.icon}
                 isExtended={!extendedChapterState.isEmpty() && extendedChapterState.isEquals(chapterData)}
                 currentPage={props.currentPage}
-                onToggle={(target) => onToggleChapterHandler(extendedChapterState, chapterData)}
+                onToggle={onToggleChapterHandler(extendedChapterState, chapterData)}
               />
             ))}
           </ul>
         }
+      </div>
+      <div className={classNames('sidebar-section', 'sidebar-footer-section')}>
+
+      <div className={classNames('icon-button', 'toggle-button')} onClick={onToggleHandler(isOpenState)}>
+        <img className='menu-image' src={menuBarIcon} alt=""/>
+      </div>
+
       </div>
     </div>
 

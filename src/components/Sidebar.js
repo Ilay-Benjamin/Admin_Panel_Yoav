@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import { appDetails } from './../config/app/app.config.js';
 import Page from './../models/page.js';
 import menuBarIcon from '../assets/images/icons/menu-bar.png';
+<<<<<<< HEAD
 import searchIcon from '../assets/images/icons/search.png';
 import helpIcon from '../assets/images/icons/help.png';
 import issueIcon from '../assets/images/icons/issue.png';
@@ -11,6 +12,8 @@ import upArrowIcon from '../assets/images/icons/up-arrow.png';
 import downArrowIcon from '../assets/images/icons/down-arrow.png';
 
 
+=======
+>>>>>>> bd73a2a (Added Working Sliding Bar)
 import './Sidebar.css'; // Assuming you have styles for Sidebar
 
 const projectPages = appDetails.pages;
@@ -54,6 +57,7 @@ class SidebarActions {
     static Opened(props) {
       return (
         <div className={classNames('sidebar', 'open')}>
+<<<<<<< HEAD
 
           <div className={classNames('sidebar-section', 'sidebar-top-section')}>
 
@@ -165,6 +169,17 @@ class SidebarActions {
     }
 
     
+=======
+          <div className={classNames('sidebar-section', 'top-section')}>
+            <div className={classNames('icon-button', 'menu-button')} onClick={props.onClickHandler}>
+              <img className='menu-image' src={menuBarIcon} alt="" />
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+>>>>>>> bd73a2a (Added Working Sliding Bar)
     static Closed(props) {
       return (
         <div className={classNames('sidebar-section', 'top-section')}>
@@ -201,7 +216,10 @@ function Sidebar(props) {
 
   return (
     <SidebarComponent onClickHandler={() => onToggleHandler(isOpenState)} />
+<<<<<<< HEAD
 
+=======
+>>>>>>> bd73a2a (Added Working Sliding Bar)
   );
 }
 

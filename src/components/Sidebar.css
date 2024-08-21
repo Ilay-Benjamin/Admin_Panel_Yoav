@@ -49,6 +49,7 @@
     
   }
 
+<<<<<<< HEAD
   .sidebar-footer-section {
     height: 25%;
     background-color: darkblue;
@@ -112,11 +113,15 @@
   }
 
   .expand-image {
+=======
+  .toggle-image {
+>>>>>>> bd73a2a (Added Working Sliding Bar)
     width: 35px;
     height: 35px;
     object-fit: fill;
   }
 
+<<<<<<< HEAD
   .chapter-content {
     display: none;
   }
@@ -129,3 +134,11 @@
     align-items: center;
   }
 
+=======
+  .top-section {
+    max-height: 100%;
+    border: none;
+    cursor: pointer;
+    margin: 10px 10px;
+  }
+>>>>>>> bd73a2a (Added Working Sliding Bar)

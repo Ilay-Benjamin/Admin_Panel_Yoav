@@ -1,0 +1,43 @@
+{
+    "name": "admin_panel_yoav",
+    "version": "1.0.0",
+    "port": 3074,
+    "app": {
+        "details": {
+            "pages": [
+                {
+                    "name": "Home",
+                    "url": "/home",
+                    "ext": "html"
+                }
+            ]
+        },
+        "data": {
+            "users": [
+                {
+                    "id": 1,
+                    "fullname": "Ilay Benjamin",
+                    "rule": "Developer",
+                    "password": "1234"
+                },
+                {
+                    "id": 2,
+                    "fullname": "John Doe",
+                    "rule": "HR Manager",
+                    "password": "abcd"
+                }
+            ]
+        }
+    },
+    "description": {
+        "credits": {
+            "owner": [
+                {
+                    "name": "Ilay",
+                    "age": 21,
+                    "isMale": true
+                }
+            ]
+        }
+    }
+}

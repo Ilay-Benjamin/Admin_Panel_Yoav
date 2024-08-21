@@ -1,0 +1,34 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #444;
+  color: #fff;
+  height: 100vh;
+  padding: 20px;
+  position: fixed;
+}
+
+.content {
+  margin-left: 220px;
+  padding: 20px;
+}
+
+.topbar {
+  background-color: #555;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}

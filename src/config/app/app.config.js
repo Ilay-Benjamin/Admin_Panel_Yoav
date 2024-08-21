@@ -1,14 +1,12 @@
-import { readFile } from 'fs/promises';
-import path from 'path';
+import appConfigJSON from './app.config.json';
 
-// קריאת קובץ ה-JSON
-const appConfigPath = path.resolve('config/app/app.config.json');
-const appConfig = JSON.parse(await readFile(appConfigPath, 'utf-8'));
+export const appConfig = JSON.parse(JSON.stringify(appConfigJSON));
 
 // הגדרת משתני הסביבה
 process.env.APP_NAME = appConfig.name;
 process.env.APP_VERSION = appConfig.version;
 process.env.APP_PORT = appConfig.port;
+
 
 // ייצוא הנתונים לשימוש בפרויקט
 export const appDetails = appConfig.app.details;

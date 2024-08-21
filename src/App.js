@@ -9,7 +9,7 @@ function App() {
     <div className="app">
       <Header />
       <div className="main-container">
-        <Sidebar />
+        <Sidebar isOpen={false} />
         <main className="main-content">
           <Home />
         </main>

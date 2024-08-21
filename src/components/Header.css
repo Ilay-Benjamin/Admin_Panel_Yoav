@@ -7,7 +7,7 @@
   background-color: #333;
   color: white;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-self: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
@@ -59,7 +59,7 @@
 .search-button {
 }
 
-.menu-button {
+.go-home-button {
 }
 
 img {
@@ -70,8 +70,8 @@ img {
 
 .fullname-text {
   color: white;
-  font-size: 15px;
-  letter-spacing: 1.2px; 
+  font-size: 13px;
+  letter-spacing: 0.9px; 
   font-weight: bold;
   text-align: center;
 }

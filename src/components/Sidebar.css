@@ -20,4 +20,16 @@
   .sidebar-item:hover {
     background-color: #666;
   }
-  
+
+  .toggle-image {
+    width: 35px;
+    height: 35px;
+    object-fit: fill;
+  }
+
+  .top-section {
+    max-height: 100%;
+    border: none;
+    cursor: pointer;
+    margin: 10px 10px;
+  }

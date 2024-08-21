@@ -1,0 +1,14 @@
+/* pages/Home/style.Home.css */
+.home-page {
+    padding: 20px;
+  }
+  
+  .page-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .page-description {
+    font-size: 18px;
+  }
+  

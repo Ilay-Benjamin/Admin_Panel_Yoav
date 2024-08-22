@@ -1,9 +1,9 @@
 import React from 'react';
-import './Header.css'; // Assuming you have styles for Header
-import profilePicture from '../assets/images/icons/profile_picture.png'; // Assuming you have a profile picture
-import yoavLogo from '../assets/images/icons/yoav_logo.jpg'; // Assuming you have a logo
-import searchIcon from '../assets/images/icons/search.png'; // Assuming you have a search icon
-import homeIcon from '../assets/images/icons/home.png'
+import '../../assets/css/components/Header/style.Header.css'; // Assuming you have styles for Header
+import profilePicture from '../../assets/images/icons/profile_picture.png'; // Assuming you have a profile picture
+import yoavLogo from '../../assets/images/icons/yoav_logo.jpg'; // Assuming you have a logo
+import searchIcon from '../../assets/images/icons/search.png'; // Assuming you have a search icon
+import homeIcon from '../../assets/images/icons/home.png'
 import classNames from 'classnames';
 
 

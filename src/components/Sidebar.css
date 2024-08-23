@@ -1,3 +1,10 @@
+:root {
+  --top-section-height: 7%;
+  --middle-section-height: 55%; 
+  --footer-section-height: 5%;
+}
+
+
 /* components/Sidebar.css */
 .sidebar {
     height: 100%;
@@ -29,28 +36,40 @@
   }
   
   .sidebar-top-section {
-    max-height: 100%;
+    max-height: 120px;
+    height: var(--top-section-height);
     border: none;
     cursor: pointer;
     justify-content: center;
     align-items: center;
+    margin-top: 4px;
+    padding: 5px;
+    border-top: 1px solid #555;
+    border-bottom: 1px solid #555;
   }
 
   .sidebar-middle-section {
-    height: 60%;
+    height: var(--middle-section-height);
     width: 95%;
-    background-color: rgb(58, 58, 255);
-    justify-content: center;
+    justify-content: start;
     align-items: center;
-    
+    padding: 10px;
+    border-top: 1px solid #555;
+    border-bottom: 1px solid #555;
   }
 
   .sidebar-footer-section {
+    height: var(--footer-section-height);
     flex-direction: row;
-    justify-content: end;
-    align-self: end;
-    margin: 0;
-    padding: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: gray;
+    font-size: 12px;
+    margin-bottom: 4px;
+    padding: 5px;
+    border-top: 1px solid #555;
+    border-bottom: 1px solid #555;
   }
 
   .section-title {
@@ -83,82 +102,6 @@
     object-fit: fill;
   }
 
-  .chapter {
-    width: 90%;
-    height: auto;
-    background-color: darkred;
-    border: 1px solid rgb(13, 13, 140);
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    justify-content: space-between;
-    margin: 0;
-    padding: 0;
-  }
-
-  .assistance-chapter {
-    border-radius: 15px 15px 0 0;
-  }
-
-  .chapter-title{
-    background-color: rgb(241, 123, 39);
-    display: flex;
-    flex-direction:row;
-    justify-content: space-between;
-    align-items: center;
-    align-content: start;
-    justify-items: start;
-    color: white;
-    font-size: 15px;
-    margin: 0;
-    padding: 0;
-  }
-
-  .chapter-title-text {
-    text-align: left;
-    padding-left: 7px
-  }
-
-  .chapter-expand-button {
-    max-height: 100%;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-self: center;
-    align-items: center;
-    margin-right: 5px;
-    border-radius:50%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
-  }
-
-  .expand-image{
-    width: 28px;
-    height: 28px;
-    object-fit: fill;
-  }
-
-  .chapter-content {
-    display: none;
-  }
-
-  .chapter-item {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-self: center;
-    align-items: center;
-  }
-
-  .shorten-button {
-    color: white;
-    font-size: 15px;
-    margin: 0;
-    padding: 0;
-  }
-
-  .expand-button {
-  }
 
   .sidebar-close-button {
     display: flex;
@@ -177,3 +120,4 @@
     background-color: rgb(129, 92, 65);
     margin: 10px;
   }
+  

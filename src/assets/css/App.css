@@ -1,12 +1,12 @@
 /* assets/css/App.css */
 body, html, #root, .app {
-  margin: 0;
-  padding: 0;
   height: 100%;
   width: 100%;
   font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
+  margin: 0;
+  padding: 0;
 }
 
 .main-container {

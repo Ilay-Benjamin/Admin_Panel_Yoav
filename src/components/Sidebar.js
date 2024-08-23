@@ -9,6 +9,11 @@ import issueIcon from '../assets/images/icons/issue.png';
 import clockIcon from '../assets/images/icons/clock.png';
 import upArrowIcon from '../assets/images/icons/up-arrow.png';
 import downArrowIcon from '../assets/images/icons/down-arrow.png';
+import rightArrowIcon from '../assets/images/icons/right-arrow.png';
+import leftArrowIcon from '../assets/images/icons/left-arrow.png';
+import adminToolIcon from '../assets/images/icons/admin-tool.png';
+
+
 
 
 import './Sidebar.css'; // Assuming you have styles for Sidebar
@@ -56,13 +61,11 @@ class SidebarActions {
         <div className={classNames('sidebar', 'open')}>
 
           <div className={classNames('sidebar-section', 'sidebar-top-section')}>
-
-            <div className={classNames('section-title', 'home-section-title')}>
-              <p className={classNames("section-title-text", 'home-title-text')}>Home</p>
+            <div className={classNames('section-title', 'header-section-title')}>
+              <img className='header-title-image' src={adminToolIcon} alt="" />
             </div>
 
           </div>
-
 
           <div className={classNames('sidebar-section', 'sidebar-middle-section')}>
             <div className={classNames('section-title', 'pages-section-title')}>
@@ -151,27 +154,20 @@ class SidebarActions {
 
           <div className={classNames('sidebar-section', 'sidebar-footer-section')}>
 
-            <div className={classNames('icon-button', 'toggle-button')} onClick={props.onClickHandler}>
-              <img className='menu-image' src={menuBarIcon} alt="" />
+            <div className={classNames('icon-button', 'sidebar-close-button')} onClick={props.onClickHandler}>
+              <img className='close-image' src={leftArrowIcon} alt="" />
             </div>
 
           </div>
-
-
 
         </div>
 
       );
     }
 
-    
     static Closed(props) {
       return (
-        <div className={classNames('sidebar-section', 'top-section')}>
-          <div className={classNames('icon-button', 'menu-button')} onClick={props.onClickHandler}>
-            <img className='menu-image' src={menuBarIcon} alt="" />
-          </div>
-        </div>
+        <></>
       );
     }
 
@@ -189,19 +185,18 @@ const isProjectPage = (page) => {
   return projectPages.some((projectPage) => Page.PAGE_UTILS.isEquals(page, Page.PAGE_UTILS.fromObject(projectPage)));
 }
 
-const onToggleHandler = (isOpenState) => {
-  SidebarActions.VISIBILITY.toggle(isOpenState);
-}
 
 function Sidebar(props) {
-  const [isOpen, setIsOpen] = useState(true);
-  const isOpenState = new IsOpenState(isOpen, setIsOpen);
-
-  const SidebarComponent = SidebarActions.TYPES.getType(isOpenState.get());
-
+  const isSidebarOpen = props.isSidebarOpen;
+  const toggleSidebar = props.toggleSidebar;
+  const SidebarComponent = SidebarActions.TYPES.getType(isSidebarOpen);
+  const onToggleSidebarHandler = (target) => {
+    target.preventDefault();
+    toggleSidebar(!isSidebarOpen);
+  }
+  
   return (
-    <SidebarComponent onClickHandler={() => onToggleHandler(isOpenState)} />
-
+    <SidebarComponent onToggle={(target) => onToggleSidebarHandler(target)} />
   );
 }
 

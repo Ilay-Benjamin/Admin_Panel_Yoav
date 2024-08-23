@@ -16,7 +16,9 @@ function EmptyPage(props) {
         <Header isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
       </div>
       <div className="main-container">
-        <Sidebar isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
+          <div className="sidebar-container">
+            <Sidebar className='sidebar' isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
+          </div>
         <main className="main-content">
           <Home />
         </main>

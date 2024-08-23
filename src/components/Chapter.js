@@ -106,14 +106,15 @@ function Chapter(props) {
         toggleChapter(!isChapterExpanded);
     }
 
-    const chapterClasses = classNames('section-chapter', (props.isChapterExpanded ? 'expanded-chapter' : 'shortened-chapter'));
+    const chapterClasses = classNames('section-chapter', (isChapterExpanded ? 'expanded-chapter' : 'shortened-chapter'));
+    const arrowIcon = isChapterExpanded ? upArrowIcon : downArrowIcon;
 
     return (
         <div className={chapterClasses}>
             <div className={classNames('chapter-title')}>
                 <p className={classNames("chapter-title-text")}>{props.chapterTitle}</p>
                 <div className={classNames('chapter-expand-button')} onClick={(target) => onToggleHandler(target)}>
-                    <img className='expand-image' src={downArrowIcon} alt="" />
+                    <img className='expand-image' src={arrowIcon} alt="" />
                 </div>
             </div>
 
@@ -136,17 +137,19 @@ function Chapter(props) {
 function ChapterItem(props) {
     return (
         <div className={classNames('chapter-item')}>
-            {/* Item Title */}
-            <div className={classNames('item-title')}>
-                {/* Item Title Text */}
-                <p className={classNames('item-title-text')}>{props.itemTitle}</p>
-            </div>
 
             {/* Item Icon */}
             <div className={classNames('item-icon')}>
                 {/* Item Icon Image */}
                 <img className={classNames('item-icon-image')} src={props.itemIcon} alt="" />
             </div>
+
+            {/* Item Title */}
+            <div className={classNames('item-title')}>
+                {/* Item Title Text */}
+                <p className={classNames('item-title-text')}>{props.itemTitle}</p>
+            </div>
+
         </div>
     );
 }

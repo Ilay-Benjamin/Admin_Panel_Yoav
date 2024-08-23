@@ -189,18 +189,20 @@ function Sidebar(props) {
 
       <div className={classNames('sidebar-section', 'sidebar-middle-section')}>
         <div className={classNames('section-title', 'pages-section-title')}>
-          <p className={classNames("section-title-text", 'home-title-text')}>Pages</p>
+          <p className={classNames("section-title-text", 'pages-title-text')}>Pages</p>
         </div>
-        <Chapter 
+        <Chapter
           chapterName='assistance'
           chapterTitle='Assistance'
           chapterItems={items}
-          isChapterExpanded={true}
+          isChapterExpanded={false}
         />
       </div>
 
       <div className={classNames('sidebar-section', 'sidebar-footer-section')}>
-        <p>@Ilay_Benjamin</p>
+        <div className={classNames('section-title', 'about-section-title')}>
+          <p className={classNames("section-title-text", 'about-title-text')}>@Ilay_Benjamin</p>
+        </div>
       </div>
 
     </div>

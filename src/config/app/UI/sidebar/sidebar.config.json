@@ -1,0 +1,66 @@
+{
+    "sections": [
+        {
+            "sectionName": "top-section",
+            "contentType": "image",
+            "content": "/assets/images/icons/admin-tool.png",
+        },
+        {
+            "sectionName": "bottom-section",
+            "contentType": "",
+            "content": "/assets/images/icons/admin-tool.png",
+
+        }
+    
+    ]
+    "chapters": [
+        {
+            "chapterName": "assistance",
+            "chapterTitle": "Assistance",
+            "chapterItems": [
+                {
+                    "itemName": "Search",
+                    "itemTitle": "Search",
+                    "itemIcon": "/assets/images/icons/search.png"
+                },
+                {
+                    "itemName": "Issue",
+                    "itemTitle": "Issue",
+                    "itemIcon": "/assets/images/icons/issue.png"
+                },
+                {
+                    "itemName": "Help",
+                    "itemTitle": "Help",
+                    "itemIcon": "/assets/images/icons/help.png"
+                },
+                {
+                    "itemName": "Contact",
+                    "itemTitle": "Contact",
+                    "itemIcon": "/assets/images/icons/email.png"
+                }
+            ]
+        },
+        {
+            "chapterName": "editors",
+            "chapterTitle": "Editors",
+            "chapterItems": [
+                {
+                    "itemName": "hours",
+                    "itemTitle": "Hours",
+                    "itemIcon": "/assets/images/icons/clock.png"
+                }
+            ]
+        },
+        {
+            "chapterName": "other",
+            "chapterTitle": "Other",
+            "chapterItems": [
+                {
+                    "itemName": "Settings",
+                    "itemTitle": "Settings",
+                    "itemIcon": "/assets/images/icons/settings.png"
+                }
+            ]
+        }
+    ]
+}

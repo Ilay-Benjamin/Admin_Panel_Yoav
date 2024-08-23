@@ -15,7 +15,13 @@
     flex-direction: column;
     justify-content: start;
     align-self: center;
+    overflow-y: hidden;
 }
+.sidebar {
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
 
 .header-container {
     width: var(--page-header-width);
@@ -37,6 +43,7 @@
     align-self: start;
     margin: 0;
     padding: 0;
+    
 }
 
 .main-content {
@@ -51,7 +58,7 @@
     margin: 0;
     padding: 0;
     border: 1px solid black;
-
+    padding-top: 3px;
+    padding-bottom: 3px;
 }
-
 

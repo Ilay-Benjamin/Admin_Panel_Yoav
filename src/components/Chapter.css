@@ -1,7 +1,7 @@
 :root {
     --chapter-height: 100%;
     --chapter-width: 200px;
-    --chapter-title-height: 40px;
+    --chapter-title-height: 32px;
 }
 
 .section-chapter:first-of-type {
@@ -11,16 +11,20 @@
 .section-chapter {
     background-color: #0d2136;
     width: calc(100% - 10px);
-    height: auto;
-    border: 1px solid rgb(13, 13, 140);
+    border: 2px solid rgb(204, 0, 255);
     display: flex;
     flex-direction: column;
     align-self: center;
     justify-content: start;
     margin: 0;
+    overflow: hidden; /* Ensures content is hidden when collapsed */
+    transition: max-height 0.5s ease-out; /* Smooth transition */
+    border-radius: 16px 16px 16px 16px;
+
 }
 
 .chapter-title {
+    height: var(--chapter-title-height);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -31,11 +35,17 @@
     font-size: 14px;
     margin: 0;
     padding: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out; /* Smoothly transition the max-height */
+}
+
+.expanded-chapter > .chapter-title {
+    text-decoration: underline;
 }
 
 .chapter-title-text {
     color: #d3e3fd;
-    font-size: 13px;
+    font-size: 14.5px;
     font-family: Roboto, "helvetica neue", sans-serif;
     padding-left: 12px;
     text-overflow: ellipsis;
@@ -45,10 +55,7 @@
     cursor: pointer;
     letter-spacing: .25px;
     margin: 0;
-}
-
-.expanded-chapter > .chapter-title {
-    text-decoration: underline;
+    text-align: center;
 }
 
 .chapter-expand-button {
@@ -64,8 +71,8 @@
 }
 
 .expand-image {
-    width: 28px;
-    height: 28px;
+    width: 20px;
+    height: 20px;
     object-fit: fill;
 }
 
@@ -101,8 +108,6 @@
 .chapter-item {
     height: 40px;
     width: calc(100% - 10px);
-    border-left: 1px solid rgb(13, 13, 140);
-    border-right: 1px solid rgb(13, 13, 140);
     display: flex;
     flex-direction: row;
     justify-content: start;
@@ -111,8 +116,9 @@
 }
 
 .item-title-text {
+    font-weight:bolder;
     color: #d3e3fd;
-    font-size: 12px;
+    font-size: 13px;
     font-family: Roboto, "helvetica neue", sans-serif;
     padding-left: 16px;
     text-overflow: ellipsis;

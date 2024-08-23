@@ -3,6 +3,7 @@ import { useState } from 'react';
 import classNames from 'classnames';
 import { appDetails } from '../config/app/app.config.js';
 import Page from '../models/page.js';
+import { sidebarConfig } from '../config/app/UI/sidebar/sidebar.config';
 import menuBarIcon from '../assets/images/icons/menu-bar.png';
 import searchIcon from '../assets/images/icons/search.png';
 import helpIcon from '../assets/images/icons/help.png';
@@ -18,6 +19,40 @@ import emailIcon from '../assets/images/icons/email.png';
 import './Chapter.css'; // Assuming you have styles for Sidebar
 
 
+
+const getImageByPath = (imagePath) => {
+    var pathComponents = imagePath.split('/');
+    var parentDirName = pathComponents[pathComponents.length - 2];
+    var imageName = pathComponents[pathComponents.length - 1];
+    var newImagePath = "/icons/" + imageName;
+    switch (newImagePath) {
+      case '/icons/search.png':
+        return searchIcon;
+      case '/icons/help.png':
+        return helpIcon;
+      case '/icons/issue.png':
+        return issueIcon;
+      case '/icons/clock.png':
+        return clockIcon;
+      case '/icons/up-arrow.png':
+        return upArrowIcon;
+      case '/icons/down-arrow.png':
+        return downArrowIcon;
+      case '/icons/right-arrow.png':
+        return rightArrowIcon;
+      case '/icons/left-arrow.png':
+        return leftArrowIcon;
+      case '/icons/admin-tool.png':
+        return adminToolIcon;
+      case '/icons/email.png':
+        return emailIcon;
+      case '/incons/menu-bar.png':
+        return menuBarIcon;
+      default:
+        return searchIcon;
+    }
+}
+
 class ChapterFactory {
     static TYPES = {
         EXPANDED: true,
@@ -29,7 +64,6 @@ class ChapterFactory {
         static GET_COMPONENT(isExpanded) {
             return isExpanded ? ChapterFactory.BUILDER.ExpandedChapter : ChapterFactory.BUILDER.ShortenChapter;
         }
-
 
         static BUILD_COMPONENT(props) {
             const isExpanded = props.isExpanded;
@@ -96,6 +130,7 @@ class ChapterFactory {
 }
 
 
+
 function Chapter(props) {
     const [isChapterExpanded, toggleChapter] = useState(props.isChapterExpanded);
 
@@ -141,7 +176,7 @@ function ChapterItem(props) {
             {/* Item Icon */}
             <div className={classNames('item-icon')}>
                 {/* Item Icon Image */}
-                <img className={classNames('item-icon-image')} src={props.itemIcon} alt="" />
+                <img className={classNames('item-icon-image')} src={getImageByPath(props.itemIcon)} alt="" />
             </div>
 
             {/* Item Title */}

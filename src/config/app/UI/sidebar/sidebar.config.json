@@ -2,65 +2,77 @@
     "sections": [
         {
             "sectionName": "top-section",
+            "sectionTitle": "x",
             "contentType": "image",
             "content": "/assets/images/icons/admin-tool.png",
+            "moveTo": "/search"
+        },
+        {
+            "sectionName": "middle-section",
+            "sectionTitle": "Pages",
+            "contentType": "chapters",
+            "content": [
+                {
+                    "chapterName": "assistance",
+                    "chapterTitle": "Assistance",
+                    "chapterItems": [
+                        {
+                            "itemName": "search",
+                            "itemTitle": "Search",
+                            "itemIcon": "/assets/images/icons/search.png",
+                            "moveTo": "/search"
+                        },
+                        {
+                            "itemName": "contact",
+                            "itemTitle": "Contact",
+                            "itemIcon": "/assets/images/icons/email.png",
+                            "moveTo": "/contact"
+                        },
+                        {
+                            "itemName": "help",
+                            "itemTitle": "Help",
+                            "itemIcon": "/assets/images/icons/help.png",
+                            "moveTo": "/help"
+                        }
+                    ]
+                },
+                {
+                    "chapterName": "editors",
+                    "chapterTitle": "Editors",
+                    "chapterItems": [
+                        {
+                            "itemName": "hours",
+                            "itemTitle": "Hours",
+                            "itemIcon": "/assets/images/icons/clock.png",
+                            "moveTo": "/hoursEditor"
+                        }
+                    ]
+                },
+                {
+                    "chapterName": "other",
+                    "chapterTitle": "Other",
+                    "chapterItems": [
+                        {
+                            "itemName": "settings",
+                            "itemTitle": "Settings",
+                            "itemIcon": "/assets/images/icons/settings.png",
+                            "moveTo": "/settings"
+                        },
+                        {
+                            "itemName": "issue",
+                            "itemTitle": "Issue",
+                            "itemIcon": "/assets/images/icons/issue.png",
+                            "moveTo": "/issue"
+                        }
+                    ]
+                }
+            ]
         },
         {
             "sectionName": "bottom-section",
-            "contentType": "",
-            "content": "/assets/images/icons/admin-tool.png",
-
-        }
-    
-    ]
-    "chapters": [
-        {
-            "chapterName": "assistance",
-            "chapterTitle": "Assistance",
-            "chapterItems": [
-                {
-                    "itemName": "Search",
-                    "itemTitle": "Search",
-                    "itemIcon": "/assets/images/icons/search.png"
-                },
-                {
-                    "itemName": "Issue",
-                    "itemTitle": "Issue",
-                    "itemIcon": "/assets/images/icons/issue.png"
-                },
-                {
-                    "itemName": "Help",
-                    "itemTitle": "Help",
-                    "itemIcon": "/assets/images/icons/help.png"
-                },
-                {
-                    "itemName": "Contact",
-                    "itemTitle": "Contact",
-                    "itemIcon": "/assets/images/icons/email.png"
-                }
-            ]
-        },
-        {
-            "chapterName": "editors",
-            "chapterTitle": "Editors",
-            "chapterItems": [
-                {
-                    "itemName": "hours",
-                    "itemTitle": "Hours",
-                    "itemIcon": "/assets/images/icons/clock.png"
-                }
-            ]
-        },
-        {
-            "chapterName": "other",
-            "chapterTitle": "Other",
-            "chapterItems": [
-                {
-                    "itemName": "Settings",
-                    "itemTitle": "Settings",
-                    "itemIcon": "/assets/images/icons/settings.png"
-                }
-            ]
+            "sectionTitle": "yx",
+            "contentType": "text",
+            "content": "@Ilay_Benjamin"
         }
     ]
 }

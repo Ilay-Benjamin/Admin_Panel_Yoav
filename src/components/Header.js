@@ -24,8 +24,7 @@ function Header(props) {
     <header className="header-content">
       <div className={classNames('header-section', 'start-section')}>
         <div className={classNames('icon-button' , "menu-button")} onClick={(target) => onToggleSidebarHandler(target)}> <img className='menu-image' src={toggleSidebarIcon} alt="" /> </div>
-        <div className={classNames('icon-button' , "search-button")}> <img className='search-image' src={homeIcon} alt="" /> </div>
-        <div className={classNames('icon-button' , "go-home-button")}> <img className='home-image' src={searchIcon} alt="" /> </div>
+        <div className={classNames('icon-button' , "go-home-button")}> <img className='home-image' src={homeIcon} alt="" /> </div>
       </div>
       <div className={classNames('header-section', 'middle-section')}>
         <div className={classNames('icon-button' , "logo")}> <img className='logo-image' src={yoavLogo} alt="" /> </div>

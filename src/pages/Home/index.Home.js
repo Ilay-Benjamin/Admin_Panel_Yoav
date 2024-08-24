@@ -1,5 +1,6 @@
 import React from 'react';
-import './style.Home.css';
+
+
 
 function Home(props) {
   const { name, age } = props;
@@ -43,7 +44,7 @@ function Home(props) {
   }
 
   return (
-    <div className="home-page">
+    <div className="page">
       <h1 className="page-title" style={currentStyle}>{currentTitle}</h1>
       <p className="page-description">{currentDescription}</p>
     </div>

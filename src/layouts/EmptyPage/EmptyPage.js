@@ -24,7 +24,7 @@ function EmptyPage(props) {
         <main className="main-content" style={{
           padding: 0, margin: 0
         }}>
-            {props.page.buildComponent()}
+              {props.page.buildComponent()}
         </main>
       </div>
     </div>

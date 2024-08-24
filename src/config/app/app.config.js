@@ -1,5 +1,6 @@
 import appConfigJSON from './app.config.json';
 import Home from '../../pages/Home/index.Home';
+import ErrorPage from '../../pages/Error/index.Error';
 import SettingsPage from '../../pages/other/Settings/index.Settings';
 import IssuePage from '../../pages/other/Issue/index.Issue';
 import BulletinEditorPage from '../../pages/editors/BulletinEditor/index.BulletinEditor';
@@ -134,6 +135,8 @@ export const appPages = {
             switch (fixedComponentPath) {
                 case "home/index":
                     return Home;
+                case "error/index":
+                    return ErrorPage;
                 case 'other/settings/index':
                     return SettingsPage;
                 case 'other/issue/index':
@@ -151,7 +154,7 @@ export const appPages = {
                 case 'assistance/contact/index':
                     return ContactPage;
                 default:
-                    return Home;
+                    return ErrorPage;
             }
         },
 

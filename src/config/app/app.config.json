@@ -11,7 +11,12 @@
                     "route": "/",
                     "component": "/pages/Home/index.Home.js"
                 },
-
+                {
+                    "name": "Error",
+                    "path": "/Error",
+                    "route": "/",
+                    "component": "/pages/Home/index.Home.js"
+                },
                 {
                     "name": "Contact",
                     "path": "/assistance/contact",

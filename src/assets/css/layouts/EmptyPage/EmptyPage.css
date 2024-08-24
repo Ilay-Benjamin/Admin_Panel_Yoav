@@ -62,3 +62,27 @@
     padding-bottom: 3px;
 }
 
+/* pages/Home/style.Home.css */
+.page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  background-color: khaki;
+}
+
+.page:nth-child(1 of div.page) {
+  padding: 5px;
+}
+
+.page-title {
+  font-size: 28px;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  padding: 0; /* Ensure no extra padding */
+}
+

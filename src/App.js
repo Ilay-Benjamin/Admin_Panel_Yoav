@@ -11,7 +11,6 @@ import { sidebarConfig } from './config/app/UI/sidebar/sidebar.config';
 import { appDetails, appPages} from './config/app/app.config.js';
 
 
-
 const pagesArray = appPages.pages;
 
 const PagesProps = {
@@ -35,7 +34,8 @@ const PagesProps = {
   HoursEditor: {},
   Settings: {},
   Issue: {},
-  BulletinEditor: {}
+  BulletinEditor: {},
+  Error: {}
 }
 
 
@@ -52,15 +52,17 @@ function App() {
           <Route path="/" element={<EmptyPage page = {appPages.builder.createPageData('/', 'Home', getPageProps('Home'))} />} />
           {
             pagesArray.map((page, index) => (
-              <Route 
+              <Route               
                 key = {index}
                 path = {page.path} 
                 element = {
                   <EmptyPage page = {appPages.builder.createPageData(page.route, page.name, getPageProps(page.name))} />       
-                } 
+              } 
               />
+
             ))
           }
+          <Route path="*" element={<EmptyPage page = {appPages.builder.createPageData('/', 'Error', getPageProps('Error'))} />} />
         </Routes>
       </BrowserRouter>
   </div>

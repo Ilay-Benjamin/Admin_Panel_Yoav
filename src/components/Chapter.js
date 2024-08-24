@@ -70,18 +70,6 @@ function Chapter(props) {
         }
     }
 
-    var isOpenedPageItemInChapter = false;
-
-    newItems.forEach((item) => {
-        if (props.page.path.toLowerCase() === item.moveTo.toLowerCase()) {
-            isOpenedPageItemInChapter = true;
-        }
-    });
-
-    if (isOpenedPageItemInChapter) {
-        toggleChapter(props.chapterName);
-    }
-
     const chapterClasses = classNames('section-chapter', (isChapterExpanded ? 'expanded-chapter' : 'shortened-chapter'));
     const arrowIcon = isChapterExpanded ? upArrowIcon : downArrowIcon;
 

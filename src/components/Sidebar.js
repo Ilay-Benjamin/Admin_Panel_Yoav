@@ -64,6 +64,13 @@ export default function Sidebar(props) {
   const topSection = sidebarConfig.getSection('top-section');
   const sidebarClassNames = classNames('sidebar', (isSidebarOpen ? 'opened-sidebar' : 'closed-sidebar'));
 
+  const checkIfChapterExpanded = (chapter, index) => {
+    var isExpanded = chapterExpanded === chapter.chapterName;
+    var hasOpenPageItem = chapter.chapterItems.findIndex(item => item.moveTo.toLowerCase() === page.path.toLowerCase()) !== -1;
+  
+  }
+
+
   return (
     <div className={classNames(sidebarClassNames)}>
       <div className={classNames('sidebar-section', 'sidebar-top-section')}>
@@ -78,14 +85,18 @@ export default function Sidebar(props) {
         </div>
         {
           sidebarConfig.getChaptersList('middle-section').map((chapter, index) => (
+
             <Chapter
               key={index}
               chapterName={chapter.chapterName}
               chapterTitle={chapter.chapterTitle}
               chapterItems={chapter.chapterItems}
-              isChapterExpanded={chapterExpanded === chapter.chapterName ? true : false}
+              isChapterExpanded={chapterExpanded === chapter.chapterName || 
+                  (chapter.chapterItems.findIndex(item => item.moveTo.toLowerCase() === page.path.toLowerCase()) !== -1) && 
+                  ((chapterExpanded === null) || (chapterExpanded === chapter.chapterName)) ? true : false}
               onToggle={setIsChapterExpanded}
               page={page}
+              hasOpenPageItem={chapter.chapterItems.findIndex(item => item.moveTo.toLowerCase() === page.path.toLowerCase()) !== -1}
             />
           ))
         }

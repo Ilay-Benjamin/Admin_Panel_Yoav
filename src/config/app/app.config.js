@@ -119,12 +119,13 @@ export const appPages = {
     builder: {
 
         getPageComponent: (route, pageName) => {
-            var page = appConfig.app.details.pages.find(page => page.route === route && page.name === pageName);
+            var page = appConfig.app.details.pages.find(page => page.route.toLowerCase() === route.toLowerCase() && page.name.toLowerCase() === pageName.toLowerCase());
             var componentPath = page.component;
             if (!componentPath) {
-                return null;
+                return ErrorPage;
             }
-            var fixedComponentPath = componentPath.toLowerCase();
+            //src/pages/editors/ContactEditor/index.ContactEditor.js
+            var fixedComponentPath = componentPath;
             fixedComponentPath = fixedComponentPath.startsWith('/') ? fixedComponentPath.substring(1) : fixedComponentPath;
             var pathComponents = fixedComponentPath.split('/');
             pathComponents.shift();
@@ -132,31 +133,78 @@ export const appPages = {
             fixedComponentPath = fixedComponentPath.replace('.js', '');
             pathComponents = fixedComponentPath.split('.');
             fixedComponentPath = pathComponents[0];
+            fixedComponentPath = fixedComponentPath.replace('/index', '');
+            console.log(JSON.stringify({ fixedComponentPath: fixedComponentPath, route: route, pageName: pageName, pagePath: page.path }, null, 2));
             switch (fixedComponentPath) {
-                case "home/index":
+                case "home":
                     return Home;
-                case "error/index":
+                case "error":
                     return ErrorPage;
-                case 'other/settings/index':
+                case 'other/settings':
                     return SettingsPage;
-                case 'other/issue/index':
+                case 'other/issue':
                     return IssuePage;
-                case 'editors/bulletineditor/index':
+                case 'editors/bulletineditor':
                     return BulletinEditorPage;
-                case 'editors/contactEditor/index':
+                case 'editors/ContactEditor':
                     return ContactEditorPage;
-                case 'editors/hoursEditor/index':
+                case 'editors/HoursEditor':
                     return HoursEditorPage;
-                case 'assistance/search/index':
+                case 'assistance/search':
                     return SearhPage;
-                case 'assistance/help/index':
+                case 'assistance/help':
                     return HelpPage;
-                case 'assistance/contact/index':
+                case 'assistance/contact':
                     return ContactPage;
                 default:
                     return ErrorPage;
             }
         },
+
+        getPageComponentText: (route, pageName) => {
+            var page = appConfig.app.details.pages.find(page => page.route.toLowerCase() === route.toLowerCase() && page.name.toLowerCase() === pageName.toLowerCase());
+            var componentPath = page.component;
+            if (!componentPath) {
+                return 'ErrorPadsgge';
+            }
+            //src/pages/editors/ContactEditor/index.ContactEditor.js
+            var fixedComponentPath = componentPath;
+            fixedComponentPath = fixedComponentPath.startsWith('/') ? fixedComponentPath.substring(1) : fixedComponentPath;
+            var pathComponents = fixedComponentPath.split('/');
+            pathComponents.shift();
+            fixedComponentPath = pathComponents.join('/');
+            fixedComponentPath = fixedComponentPath.replace('.js', '');
+            pathComponents = fixedComponentPath.split('.');
+            fixedComponentPath = pathComponents[0];
+            fixedComponentPath = fixedComponentPath.replace('/index', '');
+            console.log(JSON.stringify({ fixedComponentPath: fixedComponentPath, route: route, pageName: pageName, pagePath: page.path }, null, 2));
+            alert(fixedComponentPath + " - " + "editors/contactEditor");
+            switch (fixedComponentPath) {
+                case "home":
+                    return "Home";
+                case "error":
+                    return 'ErrorPage';
+                case 'other/settings':
+                    return 'SettingsPage';
+                case 'other/issue':
+                    return 'IssuePage';
+                case 'editors/bulletineditor':
+                    return 'BulletinEditorPage';
+                case 'editors/ContactEditor':
+                    return 'ContactEditorPage';
+                case 'editors/hoursEditor':
+                    return 'HoursEditorPage';
+                case 'assistance/search':
+                    return 'SearhPage';
+                case 'assistance/help':
+                    return 'HelpPage';
+                case 'assistance/contact':
+                    return 'ContactPage';
+                default:
+                    return 'ErrorPadfage';
+            }
+        },
+
 
         createPageData: (route, name, props) => {
             var newPage = appPages.getPage(route, name);

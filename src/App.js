@@ -10,7 +10,6 @@ import Chapter from './components/Chapter';
 import { sidebarConfig } from './config/app/UI/sidebar/sidebar.config';
 import { appDetails, appPages} from './config/app/app.config.js';
 
-
 const pagesArray = appPages.pages;
 
 const PagesProps = {
@@ -39,10 +38,13 @@ const PagesProps = {
 }
 
 
-
 const getPageProps = (pageName) => {
   return PagesProps[pageName];
 }
+
+
+alert(appPages.builder.getPageComponentText('/editors', 'ContactEditor', getPageProps('Search')))
+
 
 function App() {
   return (

@@ -15,7 +15,7 @@
                     "name": "Error",
                     "path": "/Error",
                     "route": "/",
-                    "component": "/pages/Home/index.Home.js"
+                    "component": "/pages/Error/index.Error.js"
                 },
                 {
                     "name": "Contact",

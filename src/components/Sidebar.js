@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Route, Routes, BrowserRouter, Link, Outlet, Redirect} from 'react-router-dom';
 import classNames from 'classnames';
 import Chapter from './Chapter';
 import { appDetails } from './../config/app/app.config.js';
@@ -17,7 +18,9 @@ import leftArrowIcon from '../assets/images/icons/left-arrow.png';
 import adminToolIcon from '../assets/images/icons/admin-tool.png';
 import emailIcon from '../assets/images/icons/email.png';
 
+
 import './Sidebar.css'; // Assuming you have styles for Sidebar
+
 
 const getImageByPath = (imagePath) => {
   var pathComponents = imagePath.split('/');
@@ -52,19 +55,18 @@ const getImageByPath = (imagePath) => {
   }
 }
 
-const projectPages = appDetails.pages;
-projectPages.map((page) => Page.PAGE_UTILS.fromObject(page));
 
-
-
-function Sidebar(props) {
+export default function Sidebar(props) {
   const [chapterExpanded, setIsChapterExpanded] = useState(null);
   const isSidebarOpen = props.isSidebarOpen;
+
+  const page = props.page;
 
   const topSection = sidebarConfig.getSection('top-section');
   const sidebarClassNames = classNames('sidebar', (isSidebarOpen ? 'opened-sidebar' : 'closed-sidebar'));
 
   return (
+    <BrowserRouter>
     <div className={classNames(sidebarClassNames)}>
       <div className={classNames('sidebar-section', 'sidebar-top-section')}>
         <div className={classNames('section-title', 'header-section-title')} >
@@ -96,10 +98,12 @@ function Sidebar(props) {
         </div>
       </div>
 
+      <Routes>
+          {}
+        </Routes>
+
     </div>
+    </BrowserRouter>
   );
 }
 
-
-
-export default Sidebar;

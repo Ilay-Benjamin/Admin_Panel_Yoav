@@ -22,19 +22,19 @@
                             "itemName": "search",
                             "itemTitle": "Search",
                             "itemIcon": "/assets/images/icons/search.png",
-                            "moveTo": "/search"
+                            "moveTo": "/assistance/search"
                         },
                         {
                             "itemName": "contact",
                             "itemTitle": "Contact",
                             "itemIcon": "/assets/images/icons/email.png",
-                            "moveTo": "/contact"
+                            "moveTo": "/assistance/contact"
                         },
                         {
                             "itemName": "help",
                             "itemTitle": "Help",
                             "itemIcon": "/assets/images/icons/help.png",
-                            "moveTo": "/help"
+                            "moveTo": "/assistance/help"
                         }
                     ]
                 },
@@ -46,19 +46,19 @@
                             "itemName": "hoursEditor",
                             "itemTitle": "Hours",
                             "itemIcon": "/assets/images/icons/clock.png",
-                            "moveTo": "/hoursEditor"
+                            "moveTo": "/editors/hoursEditor"
                         },
                         {
                             "itemName": "contactEditor",
                             "itemTitle": "Contact",
                             "itemIcon": "/assets/images/icons/clock.png",
-                            "moveTo": "/contactEditor"
+                            "moveTo": "/editors/contactEditor"
                         },
                         {
                             "itemName": "bulletinEdit",
                             "itemTitle": "bulletin",
                             "itemIcon": "/assets/images/icons/clock.png",
-                            "moveTo": "/bulletinEditor"
+                            "moveTo": "/editors/bulletinEditor"
                         }
                     ]
                 },

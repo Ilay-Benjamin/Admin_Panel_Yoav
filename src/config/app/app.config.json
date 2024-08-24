@@ -7,8 +7,57 @@
             "pages": [
                 {
                     "name": "Home",
-                    "url": "/home",
-                    "ext": "html"
+                    "path": "/home",
+                    "route": "/",
+                    "component": "/pages/Home/index.Home.js"
+                },
+                {
+                    "name": "Contact",
+                    "path": "/assistance/contact",
+                    "route": "/assistance",
+                    "component": "/pages/assistance/Contact/index.Contact.js"
+                },
+                {
+                    "name": "Search",
+                    "path": "/assistance/search",
+                    "route": "/assistance",
+                    "component": "/pages/assistance/Search/index.Search.js"
+                },
+                {
+                    "name": "Help",
+                    "path": "/assistance/help",
+                    "route": "/assistance",
+                    "component": "/pages/assistance/Help/index.Help.js"
+                },
+                {
+                    "name": "Issue",
+                    "path": "/other/issue",
+                    "route": "/other",
+                    "component": "/pages/other/Issue/index.Issue.js"
+                },
+                {
+                    "name": "Settings",
+                    "path": "/other/settings",
+                    "route": "/other",
+                    "component": "/pages/other/Settings/index.Settings.js"
+                },
+                {
+                    "name": "BulletinEditor",
+                    "path": "/editors/bulletinEditor",
+                    "route": "/editors",
+                    "component": "/pages/editors/BulletinEditor/index.BulletinEditor.js"
+                },
+                {
+                    "name": "ContactEditor",
+                    "path": "/editors/contactEditor",
+                    "route": "/editors",
+                    "component": "/pages/editors/ContactEditor/index.ContactEditor.js"
+                },
+                {
+                    "name": "HoursEditor",
+                    "path": "/editors/hoursEditor",
+                    "route": "/editors",
+                    "component": "/pages/editors/HoursEditor/index.HoursEditor.js"
                 }
             ]
         },

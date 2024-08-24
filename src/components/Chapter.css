@@ -7,16 +7,18 @@
 .section-chapter {
     background-color: #0d2136;
     width: calc(100% - 10px);
-    border: 2px solid rgb(204, 0, 255);
+    border: 1px solid #071a2b;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
     display: flex;
     flex-direction: column;
     align-self: center;
     justify-content: start;
     margin: 0;
-    overflow: hidden; /* Ensures content is hidden when collapsed */
-    transition: max-height 0.5s ease-out; /* Smooth transition */
+    overflow: hidden;
+    /* Ensures content is hidden when collapsed */
+    transition: max-height 0.5s ease-out;
+    /* Smooth transition */
     border-radius: 16px 16px 16px 16px;
-
 }
 
 .chapter-title {
@@ -32,10 +34,11 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    transition: max-height 0.5s ease-out; /* Smoothly transition the max-height */
+    transition: max-height 0.5s ease-out;
+    /* Smoothly transition the max-height */
 }
 
-.expanded-chapter > .chapter-title {
+.expanded-chapter>.chapter-title {
     text-decoration: underline;
 }
 
@@ -89,19 +92,20 @@
     text-decoration: none;
 }
 
-.shortened-chapter > .chapter-content {
+.shortened-chapter>.chapter-content {
     display: none;
 }
 
-.expanded-chapter > .chapter-title-text {
+.expanded-chapter>.chapter-title-text {
     text-decoration: underline;
 }
 
-.expanded-chapter > .chapter-content {
+.expanded-chapter>.chapter-content {
     display: flex;
 }
 
-.chapter-item {
+.chapter-item,
+.item-link {
     height: 40px;
     width: calc(100% - 10px);
     display: flex;
@@ -109,10 +113,15 @@
     justify-content: start;
     align-items: center;
     align-self: center;
+    text-decoration: none;
+}
+
+.chapter-item:last-of-type {
+    margin-bottom: 8px;
 }
 
 .item-title-text {
-    font-weight:bolder;
+    font-weight: bolder;
     color: #d3e3fd;
     font-size: 13px;
     font-family: Roboto, "helvetica neue", sans-serif;
@@ -123,12 +132,12 @@
     overflow: hidden;
     cursor: pointer;
     letter-spacing: .25px;
-    text-align: center;    
+    text-align: center;
 }
 
 .item-icon-image {
-    width: 25px;
-    height:25px;
+    width: 22px;
+    height: 22px;
 }
 
 .shorten-button {

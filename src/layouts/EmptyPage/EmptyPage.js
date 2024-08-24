@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { Route, Routes, BrowserRouter, Link, Outlet, Redirect} from 'react-router-dom';
+import { appDetails, appPages} from '../../config/app/app.config.js';
 import classNames from 'classnames';
 import Sidebar from '../../components/Sidebar';
 import Header from '../../components/Header';
-import Home from '../../pages/Home/index.Home';
 
 import '../../assets/css/layouts/EmptyPage/EmptyPage.css';
+
 
 
 
@@ -17,10 +19,10 @@ function EmptyPage(props) {
       </div>
       <div className="main-container">
           <div className="sidebar-container">
-            <Sidebar className='sidebar' isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
+            <Sidebar className='sidebar' page={props.page} isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
           </div>
         <main className="main-content">
-          <Home />
+            {props.page.buildComponent()}
         </main>
       </div>
     </div>

@@ -1,7 +1,7 @@
 import React from 'react';
-import './style.Home.css';
+import './style.HoursEditor.css';
 
-function Home() {
+function HoursEditorPage() {
   return (
     <div className="home-page">
       <h1 className="page-title">HoursEditor Page</h1>
@@ -10,4 +10,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default HoursEditorPage;

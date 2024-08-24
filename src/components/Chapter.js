@@ -1,4 +1,5 @@
 import React from 'react';
+import { Route, Routes, BrowserRouter, Link, Outlet, Redirect } from 'react-router-dom';
 import { useState } from 'react';
 import classNames from 'classnames';
 import { appDetails } from '../config/app/app.config.js';
@@ -26,30 +27,30 @@ const getImageByPath = (imagePath) => {
     var imageName = pathComponents[pathComponents.length - 1];
     var newImagePath = "/icons/" + imageName;
     switch (newImagePath) {
-      case '/icons/search.png':
-        return searchIcon;
-      case '/icons/help.png':
-        return helpIcon;
-      case '/icons/issue.png':
-        return issueIcon;
-      case '/icons/clock.png':
-        return clockIcon;
-      case '/icons/up-arrow.png':
-        return upArrowIcon;
-      case '/icons/down-arrow.png':
-        return downArrowIcon;
-      case '/icons/right-arrow.png':
-        return rightArrowIcon;
-      case '/icons/left-arrow.png':
-        return leftArrowIcon;
-      case '/icons/admin-tool.png':
-        return adminToolIcon;
-      case '/icons/email.png':
-        return emailIcon;
-      case '/incons/menu-bar.png':
-        return menuBarIcon;
-      default:
-        return searchIcon;
+        case '/icons/search.png':
+            return searchIcon;
+        case '/icons/help.png':
+            return helpIcon;
+        case '/icons/issue.png':
+            return issueIcon;
+        case '/icons/clock.png':
+            return clockIcon;
+        case '/icons/up-arrow.png':
+            return upArrowIcon;
+        case '/icons/down-arrow.png':
+            return downArrowIcon;
+        case '/icons/right-arrow.png':
+            return rightArrowIcon;
+        case '/icons/left-arrow.png':
+            return leftArrowIcon;
+        case '/icons/admin-tool.png':
+            return adminToolIcon;
+        case '/icons/email.png':
+            return emailIcon;
+        case '/incons/menu-bar.png':
+            return menuBarIcon;
+        default:
+            return searchIcon;
     }
 }
 
@@ -139,7 +140,11 @@ function Chapter(props) {
 
     const onToggleHandler = (target) => {
         target.preventDefault();
-        toggleChapter(props.chapterName);
+        if (isChapterExpanded) {
+            toggleChapter(null);
+        } else {
+            toggleChapter(props.chapterName);
+        }
     }
 
     const chapterClasses = classNames('section-chapter', (isChapterExpanded ? 'expanded-chapter' : 'shortened-chapter'));
@@ -155,13 +160,14 @@ function Chapter(props) {
             </div>
 
             <div className={classNames('chapter-content')}>
-                    {newItems.map((item, index) => (
-                        <ChapterItem key={index}
-                            itemName={item.itemName}
-                            itemTitle={item.itemTitle}
-                            itemIcon={item.itemIcon}
-                        />
-                    ))}
+                {newItems.map((item, index) => (
+                    <ChapterItem key={index}
+                        itemName={item.itemName}
+                        itemTitle={item.itemTitle}
+                        itemIcon={item.itemIcon}
+                        moveTo={item.moveTo}
+                    />
+                ))}
             </div>
 
         </div>
@@ -173,19 +179,20 @@ function Chapter(props) {
 function ChapterItem(props) {
     return (
         <div className={classNames('chapter-item')}>
+            <Link to={props.moveTo} className={classNames('item-link')}>
 
-            {/* Item Icon */}
-            <div className={classNames('item-icon')}>
-                {/* Item Icon Image */}
-                <img className={classNames('item-icon-image')} src={getImageByPath(props.itemIcon)} alt="" />
-            </div>
+                {/* Item Icon */}
+                <div className={classNames('item-icon')}>
+                    {/* Item Icon Image */}
+                    <img className={classNames('item-icon-image')} src={getImageByPath(props.itemIcon)} alt="" />
+                </div>
 
-            {/* Item Title */}
-            <div className={classNames('item-title')}>
-                {/* Item Title Text */}
-                <p className={classNames('item-title-text')}>{props.itemTitle}</p>
-            </div>
-
+                {/* Item Title */}
+                <div className={classNames('item-title')}>
+                    {/* Item Title Text */}
+                    <p className={classNames('item-title-text')}>{props.itemTitle}</p>
+                </div>
+            </Link>
         </div>
     );
 }

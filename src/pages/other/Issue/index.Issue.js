@@ -1,7 +1,7 @@
 import React from 'react';
-import './style.Home.css';
+import './style.Issue.css';
 
-function Home() {
+function IssuePage() {
   return (
     <div className="home-page">
       <h1 className="page-title">Home Page</h1>
@@ -10,4 +10,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default IssuePage;

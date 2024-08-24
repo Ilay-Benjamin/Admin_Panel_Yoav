@@ -1,7 +1,7 @@
 import React from 'react';
-import './style.Home.css';
+import './style.Search.css';
 
-function Home() {
+function SearchPage() {
   return (
     <div className="home-page">
       <h1 className="page-title">Help Page</h1>
@@ -10,4 +10,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default SearchPage;

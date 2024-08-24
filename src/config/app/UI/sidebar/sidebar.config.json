@@ -70,13 +70,13 @@
                             "itemName": "settings",
                             "itemTitle": "Settings",
                             "itemIcon": "/assets/images/icons/settings.png",
-                            "moveTo": "/settings"
+                            "moveTo": "/other/settings"
                         },
                         {
                             "itemName": "issue",
                             "itemTitle": "Issue",
                             "itemIcon": "/assets/images/icons/issue.png",
-                            "moveTo": "/issue"
+                            "moveTo": "/other/issue"
                         }
                     ]
                 }

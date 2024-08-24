@@ -1,10 +1,10 @@
 import React from 'react';
 import './style.Search.css';
 
-function SearchPage() {
+function SearchPage(props) {
   return (
-    <div className="home-page">
-      <h1 className="page-title">Help Page</h1>
+    <div>
+      <h1 className="page-title">Search Page</h1>
       <p className="page-description">Welcome to the Yoav Brigade Admin Panel.</p>
     </div>
   );

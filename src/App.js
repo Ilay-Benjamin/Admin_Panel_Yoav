@@ -1,4 +1,6 @@
 import React from 'react';
+import { Route, Routes, BrowserRouter, Link, Outlet, Redirect} from 'react-router-dom';
+
 import './assets/css/App.css';
 
 import Header from './components/Header';
@@ -19,69 +21,62 @@ import HelpPage from './pages/assistance/Help/index.Help';
 import ContactPage from './pages/assistance/Contact/index.Contact';
 
 
+const pagesArray = appPages.pages;
 
-const getPageComponent = (componentPath) => {
-  if (!componentPath) {
-    return null;
-  }
-  var fixedComponentPath = componentPath.toLowerCase();
-  fixedComponentPath = fixedComponentPath.startsWith('/') ? fixedComponentPath.substring(1) : fixedComponentPath;
-  var pathComponents = fixedComponentPath.split('/');
-  pathComponents.shift();
-  fixedComponentPath = pathComponents.join('/');
-  fixedComponentPath = fixedComponentPath.replace('.js','');
-  pathComponents = fixedComponentPath.split('.');
-  fixedComponentPath = pathComponents[0];
-  switch (fixedComponentPath) {
-    case "home/index":
-    return Home;
-    case 'other/settings/index':
-      return SettingsPage;
-    case 'other/issue/index':
-      return IssuePage;
-    case 'editors/bulletineditor/index':
-      return BulletinEditorPage;
-    case 'editors/contactEditor/index':
-      return ContactEditorPage;
-    case 'editors/hoursEditor/index':
-      return HoursEditorPage;
-    case 'assistance/search/index':
-      return SearhPage;
-    case 'assistance/help/index':
-      return HelpPage;
-    case 'assistance/contact/index':
-      return ContactPage;
-    default:
-      return Home;
-  }
+const PagesProps = {
+  Home: {
+    name: 'Yoav Ismah',
+    age: 21
+  },
+  Search: {
+    name: 'Adam Furman',
+    age: 13
+  },
+  Help: {
+    name: 'Noam Feldman',
+    age: 17
+  },
+  Contact: {
+    name: 'Hodaya Shalom',
+    age: 35
+  },
+  ContactEditor: {},
+  HoursEditor: {},
+  Settings: {},
+  Issue: {},
+  BulletinEditor: {}
 }
 
 
+
+const getPageProps = (pageName) => {
+  return PagesProps[pageName];
+}
 
 function App() {
-
-  const myPage = appPages.getPage('/', 'Home');
-
-  const pageData = {
-    name: myPage.name,
-    route: myPage.route,
-    props: {
-      name: 'Yoav Ismah',
-      age: 21
-    },
-    component: getPageComponent(myPage.component),
-    buildComponent: () => {
-      return (
-        <pageData.component name={pageData.props.name} age={pageData.props.age} />
-      );
-    }
-  }
-
   return (
     <div className="app">
-        <EmptyPage page={pageData} />
-    </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<EmptyPage page = {appPages.builder.createPageData('/', 'Home', getPageProps('Home'))} />} />
+          {
+            pagesArray.map((page, index) => (
+              <Route 
+                key = {index}
+                path = {page.path} 
+                element = {
+                  <EmptyPage page = {appPages.builder.createPageData(page.route, page.name, getPageProps(page.name))} />       
+                } 
+              />
+            ))
+          }
+        </Routes>
+      </BrowserRouter>
+  </div>
   );
 }
+
+
+
 
 export default App;

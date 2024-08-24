@@ -5,7 +5,7 @@ function ContactPage() {
   return (
     <div className="home-page">
       <h1 className="page-title">Home Page</h1>
-      <p className="page-description">Welcome to the Yoav Brigade Admin Panel.</p>
+      <p className="page-description">054adg2435</p>
     </div>
   );
 }

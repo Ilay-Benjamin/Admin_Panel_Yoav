@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import { Route, Routes, BrowserRouter, Link, Outlet, Redirect} from 'react-router-dom';
 import classNames from 'classnames';
 import Chapter from './Chapter';
-import { appDetails } from './../config/app/app.config.js';
-import Page from './../models/page.js';
+import { appDetails, appPages} from './../config/app/app.config.js';
 import './../assets/images/icons/profile_picture.png';
 import { sidebarConfig } from '../config/app/UI/sidebar/sidebar.config';
 import menuBarIcon from '../assets/images/icons/menu-bar.png';
@@ -20,6 +19,7 @@ import emailIcon from '../assets/images/icons/email.png';
 
 
 import './Sidebar.css'; // Assuming you have styles for Sidebar
+import EmptyPage from '../layouts/EmptyPage/EmptyPage';
 
 
 const getImageByPath = (imagePath) => {
@@ -66,7 +66,6 @@ export default function Sidebar(props) {
   const sidebarClassNames = classNames('sidebar', (isSidebarOpen ? 'opened-sidebar' : 'closed-sidebar'));
 
   return (
-    <BrowserRouter>
     <div className={classNames(sidebarClassNames)}>
       <div className={classNames('sidebar-section', 'sidebar-top-section')}>
         <div className={classNames('section-title', 'header-section-title')} >
@@ -98,12 +97,8 @@ export default function Sidebar(props) {
         </div>
       </div>
 
-      <Routes>
-          {}
-        </Routes>
-
     </div>
-    </BrowserRouter>
+
   );
 }
 

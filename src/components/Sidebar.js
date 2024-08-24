@@ -16,10 +16,9 @@ import rightArrowIcon from '../assets/images/icons/right-arrow.png';
 import leftArrowIcon from '../assets/images/icons/left-arrow.png';
 import adminToolIcon from '../assets/images/icons/admin-tool.png';
 import emailIcon from '../assets/images/icons/email.png';
-
+import EmptyPage from '../layouts/EmptyPage/EmptyPage';
 
 import './Sidebar.css'; // Assuming you have styles for Sidebar
-import EmptyPage from '../layouts/EmptyPage/EmptyPage';
 
 
 const getImageByPath = (imagePath) => {

@@ -21,7 +21,9 @@ function EmptyPage(props) {
           <div className="sidebar-container">
             <Sidebar className='sidebar' page={props.page} isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
           </div>
-        <main className="main-content">
+        <main className="main-content" style={{
+          padding: 0, margin: 0
+        }}>
             {props.page.buildComponent()}
         </main>
       </div>

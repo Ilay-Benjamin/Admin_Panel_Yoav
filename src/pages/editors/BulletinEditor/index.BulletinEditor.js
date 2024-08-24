@@ -4,7 +4,7 @@ import './style.BulletinEditor.css';
 function BulletinEditorPage() {
   return (
     <div className="home-page">
-      <h1 className="page-title">HoursEditor Page</h1>
+      <h1 className="page-title">BulletinEditorPage Page</h1>
       <p className="page-description">Welcome to the Yoav Brigade Admin Panel.</p>
     </div>
   );

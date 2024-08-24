@@ -10,15 +10,6 @@ import Chapter from './components/Chapter';
 import { sidebarConfig } from './config/app/UI/sidebar/sidebar.config';
 import { appDetails, appPages} from './config/app/app.config.js';
 
-import Home from './pages/Home/index.Home';
-import SettingsPage from './pages/other/Settings/index.Settings';
-import IssuePage from './pages/other/Issue/index.Issue';
-import BulletinEditorPage from './pages/editors/BulletinEditor/index.BulletinEditor';
-import ContactEditorPage from './pages/editors/ContactEditor/index.ContactEditor';
-import HoursEditorPage from './pages/editors/HoursEditor/index.HoursEditor';
-import SearhPage from './pages/assistance/Search/index.Search';
-import HelpPage from './pages/assistance/Help/index.Help';
-import ContactPage from './pages/assistance/Contact/index.Contact';
 
 
 const pagesArray = appPages.pages;

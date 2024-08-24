@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+ import React, { useState } from 'react';
 import { Route, Routes, BrowserRouter, Link, Outlet, Redirect } from 'react-router-dom';
 import classNames from 'classnames';
 import saveIcon from '../../../assets/images/icons/save.png';
@@ -13,6 +13,8 @@ import './style.ContactEditor.css';
 
 
 function ContactEditor() {
+  var [isEditorDisabled, setIsEditorDisabled] = useState(true);
+  var [focusedEditor, setFocusedEditor] = useState(null);
   return (
     <div className="page" style={{ margin: '0', padding: '0' }}>
       <div className='page-title'>
@@ -22,7 +24,7 @@ function ContactEditor() {
       </div>
       <div className='page-content'>
 
-        <div className={classNames('editor', 'disabled-editor')}>
+        <div className={classNames('editor', 'disabled-editor', 'foucsed-editor')}>
 
           <div className='editor-header'>
             <div className={classNames('editor-button', 'editor-header-button')}>
@@ -32,13 +34,20 @@ function ContactEditor() {
 
           <div className='editor-board'>
             <div className='editor-board-header'>
-              <div className={classNames('board-header-button')}>
+              <div className={classNames('board-header-button', 'save-button')}>
                 <img src={saveIcon} className={classNames('board-button-image')} alt=""></img>
               </div>
-              <div className={classNames('board-header-button')}>
+              <div className={classNames('board-header-button', 'edit-button')}>
+                <img src={editIcon} className={classNames('board-button-image')} alt=""></img>
+              </div>
+              <div className={classNames('board-header-button', 'cancel-button')}>
                 <img src={cancleIcon} className={classNames('board-button-image')} alt=""></img>
               </div>
             </div>
+            <div className='editor-board-content'>
+                <div className='editor-content-section'>
+                </div>
+             </div>
           </div>
 
         </div>

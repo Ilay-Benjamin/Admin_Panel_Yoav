@@ -126,7 +126,7 @@
         align-self: center;
         padding: 0;
         margin: 0;
-
+        border-radius: 16px
     }
 
     .editor-board-header {
@@ -140,14 +140,33 @@
         align-items: center;
         margin: 0;
         padding: 0;
+        border-radius: 16px
     }
 
     .active-editor .editor-board-header {
         justify-content: space-evenly;
+        display: flex;
+    }
+
+    .active-editor .save-button, .active-editor .cancel-button {
+        display: flex;
+    }
+
+    .active-editor .edit-button {
+        display: none;
     }
     
-    .disabled-editor .editor-board-header {
-        justify-content: space-between;
+    .disabled-editor:not(.not-foucsed-editor) .editor-board-header {
+        justify-content: space-evenly;
+        display: flex;
+    }
+
+    .disabled-editor:not(.not-foucsed-editor) .edit-button { 
+        display: flex;
+    }
+
+    .disabled-editor:not(.not-foucsed-editor) .save-button , .disabled-editor:not(.not-foucsed-editor) .cancel-button { 
+        display: none;
     }
 
     .board-header-button {
@@ -157,7 +176,7 @@
         justify-content: center;
         align-self: center;
         align-items: center;
-        margin: 0 10px;
+        margin: 0 30px;
     }
 
     .active-editor .board-header-button  {
@@ -170,4 +189,16 @@
         width: 25px;
         height: 25px;
         object-fit: fill;
+    }
+
+    .foucsed-editor .editor-board-header {
+        background-color: rgb(43, 255, 0);
+    }
+
+    .not-foucsed-editor .editor-board-header {
+        background-color: rgb(255, 140, 0);
+    }
+
+    .editor-board-content {
+        
     }

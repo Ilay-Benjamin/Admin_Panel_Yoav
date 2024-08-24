@@ -52,20 +52,17 @@ const getImageByPath = (imagePath) => {
   }
 }
 
-
 const projectPages = appDetails.pages;
 projectPages.map((page) => Page.PAGE_UTILS.fromObject(page));
 
 
+
 function Sidebar(props) {
+  const [chapterExpanded, setIsChapterExpanded] = useState(null);
   const isSidebarOpen = props.isSidebarOpen;
 
   const topSection = sidebarConfig.getSection('top-section');
-  const middleSection = sidebarConfig.getSection('middle-section');
-  const bottomSection = sidebarConfig.getSection('bottom-section');
-
   const sidebarClassNames = classNames('sidebar', (isSidebarOpen ? 'opened-sidebar' : 'closed-sidebar'));
-  const assistanceChapter = sidebarConfig.getChapter('middle-section', 'assistance');
 
   return (
     <div className={classNames(sidebarClassNames)}>
@@ -86,7 +83,8 @@ function Sidebar(props) {
               chapterName={chapter.chapterName}
               chapterTitle={chapter.chapterTitle}
               chapterItems={chapter.chapterItems}
-              isChapterExpanded={false}
+              isChapterExpanded={chapterExpanded === chapter.chapterName ? true : false}
+              onToggle={setIsChapterExpanded}
             />
           ))
         }

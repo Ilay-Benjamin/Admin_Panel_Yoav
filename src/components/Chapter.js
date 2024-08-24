@@ -132,13 +132,14 @@ class ChapterFactory {
 
 
 function Chapter(props) {
-    const [isChapterExpanded, toggleChapter] = useState(props.isChapterExpanded);
+    const isChapterExpanded = props.isChapterExpanded;
+    const toggleChapter = props.onToggle;
 
     const newItems = Array.from(props.chapterItems);
 
     const onToggleHandler = (target) => {
         target.preventDefault();
-        toggleChapter(!isChapterExpanded);
+        toggleChapter(props.chapterName);
     }
 
     const chapterClasses = classNames('section-chapter', (isChapterExpanded ? 'expanded-chapter' : 'shortened-chapter'));

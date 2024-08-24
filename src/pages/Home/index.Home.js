@@ -44,7 +44,7 @@ function Home(props) {
   }
 
   return (
-    <div className="page">
+    <div className="page" style={{margin: '0', padding: '0'}}>
       <h1 className="page-title" style={currentStyle}>{currentTitle}</h1>
       <p className="page-description">{currentDescription}</p>
     </div>

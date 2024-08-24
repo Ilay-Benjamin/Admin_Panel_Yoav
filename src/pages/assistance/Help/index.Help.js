@@ -2,7 +2,7 @@ import React from 'react';
 
 function HelpPage() {
     return (
-      <div className="page" style={{}}>
+      <div className="page" style={{margin: '0', padding: '0'}}>
         <h1 className='page-title'>Help Page</h1>
         <h3 style={{textDecoration: 'underline'}}>
           /assistance

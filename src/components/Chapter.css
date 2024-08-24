@@ -4,10 +4,6 @@
     --chapter-title-height: 32px;
 }
 
-.section-chapter:first-of-type {
-    border-radius: 15px 15px 0 0;
-}
-
 .section-chapter {
     background-color: #0d2136;
     width: calc(100% - 10px);

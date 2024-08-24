@@ -6,6 +6,7 @@
     flex-direction: column;
     justify-content: start;
     align-self: center;
+    background-color: chartreuse;
   }
   
   .page-title {

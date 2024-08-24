@@ -40,7 +40,15 @@
 
 .expanded-chapter>.chapter-title {
     text-decoration: underline;
-    text-shadow: 0 0 3px lightblue, 0 0 1px #000000;
+    font-size: 15px;
+    letter-spacing: .35px;
+    text-shadow: 0 0 3px #0022ff, 0 0 5px #96c3ffd3, 0 0 7px black;
+}
+
+.shortened-chapter>.chapter-title {
+    text-decoration: none;
+    text-shadow: 0 0 1px #000000, 0 0 2px #000000;
+
 }
 
 .chapter-title-text {
@@ -53,9 +61,8 @@
     white-space: nowrap;
     overflow: hidden;
     cursor: pointer;
-    letter-spacing: .25px;
+    letter-spacing: .30px;
     margin: 0;
-
 }
 
 .chapter-expand-button {
@@ -71,8 +78,8 @@
 }
 
 .expand-image {
-    width: 18px;
-    height: 18px;
+    width: 19px;
+    height: 19px;
     object-fit: fill;
 }
 
@@ -114,8 +121,12 @@
     align-items: center;
     align-self: center;
     text-decoration: none;    
+    border-radius: 8px;
 }
 
+.opened-page-item {
+    background-color: #0842a0
+}
 
 .chapter-item:last-of-type {
     margin-bottom: 8px;
@@ -158,3 +169,4 @@
 }
 
 .expand-button {}
+

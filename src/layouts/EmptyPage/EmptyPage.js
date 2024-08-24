@@ -9,7 +9,6 @@ import '../../assets/css/layouts/EmptyPage/EmptyPage.css';
 
 
 
-
 function EmptyPage(props) {
   const [isSidebarOpen, toggleSidebar] = useState(false);
   return (

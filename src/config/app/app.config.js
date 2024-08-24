@@ -211,6 +211,7 @@ export const appPages = {
             var newPageData = {
                 name: newPage.name,
                 route: newPage.route,
+                path: newPage.path,
                 props: Object.assign(props),
                 component: appPages.builder.getPageComponent(newPage.route, newPage.name),
                 buildComponent: () => {

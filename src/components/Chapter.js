@@ -70,6 +70,18 @@ function Chapter(props) {
         }
     }
 
+    var isOpenedPageItemInChapter = false;
+
+    newItems.forEach((item) => {
+        if (props.page.path.toLowerCase() === item.moveTo.toLowerCase()) {
+            isOpenedPageItemInChapter = true;
+        }
+    });
+
+    if (isOpenedPageItemInChapter) {
+        toggleChapter(props.chapterName);
+    }
+
     const chapterClasses = classNames('section-chapter', (isChapterExpanded ? 'expanded-chapter' : 'shortened-chapter'));
     const arrowIcon = isChapterExpanded ? upArrowIcon : downArrowIcon;
 
@@ -89,6 +101,7 @@ function Chapter(props) {
                         itemTitle={item.itemTitle}
                         itemIcon={item.itemIcon}
                         moveTo={item.moveTo}
+                        isItemPageOpen={props.page.path.toLowerCase() === item.moveTo.toLowerCase()}
                     />
                 ))}
             </div>
@@ -101,7 +114,7 @@ function Chapter(props) {
 
 function ChapterItem(props) {
     return (
-        <div className={classNames('chapter-item')}>
+        <div className={classNames('chapter-item', (props.isItemPageOpen ? 'opened-page-item' : "closed-page-item"))}>
             <Link to={props.moveTo} className={classNames('item-link')}>
 
                 {/* Item Icon */}

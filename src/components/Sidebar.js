@@ -85,6 +85,7 @@ export default function Sidebar(props) {
               chapterItems={chapter.chapterItems}
               isChapterExpanded={chapterExpanded === chapter.chapterName ? true : false}
               onToggle={setIsChapterExpanded}
+              page={page}
             />
           ))
         }

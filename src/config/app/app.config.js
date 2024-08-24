@@ -146,9 +146,9 @@ export const appPages = {
                     return IssuePage;
                 case 'editors/bulletineditor':
                     return BulletinEditorPage;
-                case 'editors/ContactEditor':
+                case 'editors/contacteditor':
                     return ContactEditorPage;
-                case 'editors/HoursEditor':
+                case 'editors/hourseditor':
                     return HoursEditorPage;
                 case 'assistance/search':
                     return SearhPage;

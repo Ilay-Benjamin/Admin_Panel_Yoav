@@ -55,8 +55,8 @@
                             "moveTo": "/editors/contactEditor"
                         },
                         {
-                            "itemName": "bulletinEdit",
-                            "itemTitle": "bulletin",
+                            "itemName": "bulletinEditor",
+                            "itemTitle": "Bulletin",
                             "itemIcon": "/assets/images/icons/clock.png",
                             "moveTo": "/editors/bulletinEditor"
                         }

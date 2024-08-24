@@ -9,61 +9,61 @@
                     "name": "Home",
                     "path": "/home",
                     "route": "/",
-                    "component": "/pages/Home/index.Home.js"
+                    "component": "/pages/home/index.home.js"
                 },
                 {
                     "name": "Error",
-                    "path": "/Error",
+                    "path": "/error",
                     "route": "/",
-                    "component": "/pages/Error/index.Error.js"
+                    "component": "/pages/error/index.error.js"
                 },
                 {
                     "name": "Contact",
                     "path": "/assistance/contact",
                     "route": "/assistance",
-                    "component": "/pages/assistance/Contact/index.Contact.js"
+                    "component": "/pages/assistance/contact/index.contact.js"
                 },
                 {
                     "name": "Search",
                     "path": "/assistance/search",
                     "route": "/assistance",
-                    "component": "/pages/assistance/Search/index.Search.js"
+                    "component": "/pages/assistance/search/index.search.js"
                 },
                 {
                     "name": "Help",
                     "path": "/assistance/help",
                     "route": "/assistance",
-                    "component": "/pages/assistance/Help/index.Help.js"
+                    "component": "/pages/assistance/help/index.help.js"
                 },
                 {
                     "name": "Issue",
                     "path": "/other/issue",
                     "route": "/other",
-                    "component": "/pages/other/Issue/index.Issue.js"
+                    "component": "/pages/other/issue/index.issue.js"
                 },
                 {
                     "name": "Settings",
                     "path": "/other/settings",
                     "route": "/other",
-                    "component": "/pages/other/Settings/index.Settings.js"
+                    "component": "/pages/other/settings/index.settings.js"
                 },
                 {
                     "name": "BulletinEditor",
                     "path": "/editors/bulletinEditor",
                     "route": "/editors",
-                    "component": "/pages/editors/BulletinEditor/index.BulletinEditor.js"
+                    "component": "/pages/editors/bulletineditor/index.bulletineditor.js"
                 },
                 {
                     "name": "ContactEditor",
                     "path": "/editors/contactEditor",
                     "route": "/editors",
-                    "component": "/pages/editors/ContactEditor/index.ContactEditor.js"
+                    "component": "/pages/editors/contacteditor/index.contacteditor.js"
                 },
                 {
                     "name": "HoursEditor",
                     "path": "/editors/hoursEditor",
                     "route": "/editors",
-                    "component": "/pages/editors/HoursEditor/index.HoursEditor.js"
+                    "component": "/pages/editors/hourseditor/index.hourseditor.js"
                 }
             ]
         },

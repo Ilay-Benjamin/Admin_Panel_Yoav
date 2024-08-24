@@ -43,7 +43,6 @@ const getPageProps = (pageName) => {
 }
 
 
-alert(appPages.builder.getPageComponentText('/editors', 'ContactEditor', getPageProps('Search')))
 
 
 function App() {

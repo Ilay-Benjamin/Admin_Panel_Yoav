@@ -1,0 +1,13 @@
+{
+    "editor.fontSize": 13.8,
+    "editor.fontFamily": "Cascadia Code",
+    "editor.letterSpacing": 1.05,
+    "editor.tabSize": 5,
+    "workbench.colorTheme": "Horizon",
+    "oneDarkPro.editorTheme": "One Dark Pro",
+    "oneDarkPro.bold": false,
+    "editor.codeLensFontSize": 10,
+    "editor.minimap.sectionHeaderFontSize": 8,
+    "chat.editor.fontSize": 14,
+    "markdown.preview.fontSize": 14
+}

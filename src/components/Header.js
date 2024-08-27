@@ -10,7 +10,7 @@ import homeIcon from '../assets/images/icons/home.png'
 import rightArrowIcon from '../assets/images/icons/right-arrow.png';
 import leftArrowIcon from '../assets/images/icons/left-arrow.png';
 
-import './Header.css'; // Assuming you have styles for Header
+import '../assets/css/components/Header.css'; // Assuming you have styles for Header
 
 
 

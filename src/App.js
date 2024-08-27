@@ -4,9 +4,9 @@ import { Route, Routes, BrowserRouter, Link, Outlet, Redirect} from 'react-route
 import './assets/css/App.css';
 
 import Header from './components/Header';
-import Sidebar from './components/Sidebar';
+import Sidebar from './components/Sidebar/Sidebar';
 import EmptyPage from './layouts/EmptyPage/EmptyPage';
-import Chapter from './components/Chapter';
+import Chapter from './components/Sidebar/Chapter';
 import { sidebarConfig } from './config/app/UI/sidebar/sidebar.config';
 import { appDetails, appPages} from './config/app/app.config.js';
 

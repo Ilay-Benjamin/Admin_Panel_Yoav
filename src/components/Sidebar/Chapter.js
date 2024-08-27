@@ -2,22 +2,22 @@ import React from 'react';
 import { Route, Routes, BrowserRouter, Link, Outlet, Redirect } from 'react-router-dom';
 import { useState } from 'react';
 import classNames from 'classnames';
-import { appDetails } from '../config/app/app.config.js';
-import Page from '../models/page.js';
-import { sidebarConfig } from '../config/app/UI/sidebar/sidebar.config';
-import menuBarIcon from '../assets/images/icons/menu-bar.png';
-import searchIcon from '../assets/images/icons/search.png';
-import helpIcon from '../assets/images/icons/help.png';
-import issueIcon from '../assets/images/icons/issue.png';
-import clockIcon from '../assets/images/icons/clock.png';
-import upArrowIcon from '../assets/images/icons/up-arrow.png';
-import downArrowIcon from '../assets/images/icons/down-arrow.png';
-import rightArrowIcon from '../assets/images/icons/right-arrow.png';
-import leftArrowIcon from '../assets/images/icons/left-arrow.png';
-import adminToolIcon from '../assets/images/icons/admin-tool.png';
-import emailIcon from '../assets/images/icons/email.png';
+import { appDetails } from '../../config/app/app.config.js';
+import Page from '../../models/page.js';
+import { sidebarConfig } from '../../config/app/UI/sidebar/sidebar.config.js';
+import menuBarIcon from '../../assets/images/icons/menu-bar.png';
+import searchIcon from '../../assets/images/icons/search.png';
+import helpIcon from '../../assets/images/icons/help.png';
+import issueIcon from '../../assets/images/icons/issue.png';
+import clockIcon from '../../assets/images/icons/clock.png';
+import upArrowIcon from '../../assets/images/icons/up-arrow.png';
+import downArrowIcon from '../../assets/images/icons/down-arrow.png';
+import rightArrowIcon from '../../assets/images/icons/right-arrow.png';
+import leftArrowIcon from '../../assets/images/icons/left-arrow.png';
+import adminToolIcon from '../../assets/images/icons/admin-tool.png';
+import emailIcon from '../../assets/images/icons/email.png';
 
-import './Chapter.css'; // Assuming you have styles for Sidebar
+import '../../assets/css/components/Sidebar/Chapter.css'; // Assuming you have styles for Sidebar
 
 
 
@@ -55,6 +55,11 @@ const getImageByPath = (imagePath) => {
 }
 
 
+function getChapterClassNames(isChapterExpanded) {
+    return classNames('section-chapter', (isChapterExpanded ? 'expanded-chapter' : 'shortened-chapter'));
+}
+
+
 function Chapter(props) {
     const isChapterExpanded = props.isChapterExpanded;
     const toggleChapter = props.onToggle;
@@ -64,13 +69,13 @@ function Chapter(props) {
     const onToggleHandler = (target) => {
         target.preventDefault();
         if (isChapterExpanded) {
-            toggleChapter(null);
+            toggleChapter(-1);
         } else {
             toggleChapter(props.chapterName);
         }
     }
 
-    const chapterClasses = classNames('section-chapter', (isChapterExpanded ? 'expanded-chapter' : 'shortened-chapter'));
+    const chapterClasses = getChapterClassNames(isChapterExpanded);
     const arrowIcon = isChapterExpanded ? upArrowIcon : downArrowIcon;
 
     return (
@@ -100,9 +105,14 @@ function Chapter(props) {
 }
 
 
+function getChapterItemClassNames(isItemPageOpen) {
+    return classNames('chapter-item', (isItemPageOpen ? 'opened-page-item' : "closed-page-item"));
+}
+
+
 function ChapterItem(props) {
     return (
-        <div className={classNames('chapter-item', (props.isItemPageOpen ? 'opened-page-item' : "closed-page-item"))}>
+        <div className={getChapterItemClassNames(props.isItemPageOpen)}>
             <Link to={props.moveTo} className={classNames('item-link')}>
 
                 {/* Item Icon */}

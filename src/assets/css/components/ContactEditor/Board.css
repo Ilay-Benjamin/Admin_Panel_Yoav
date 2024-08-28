@@ -58,3 +58,13 @@
     border-radius: 0 0 18px 18px;
 }
 
+.department-items {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    align-self: center;
+    margin: 0;
+    border-radius: 0 0 18px 18px;
+}

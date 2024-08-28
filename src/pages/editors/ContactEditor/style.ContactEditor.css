@@ -4,23 +4,25 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-self: start;
     align-items: center;
     background-color: khaki;
     padding: 0;
     margin: 0;
+    overflow-x: hidden;
   }
   
   .page-title {
-    font-size: 28px;
+    width: 90%;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-self: center;
-    width: 90%;
-    height: auto;
-    margin: 0;
+    font-size: 28px;
     padding: 0;
+    margin-top: 15px;
+    border: 1px solid rgba(162, 38, 38, 0.861);
 }
 
   .page-title-text {
@@ -35,7 +37,7 @@
     letter-spacing: .30px;
     text-align: center;
     text-shadow: 0 0 1px #ffffff, 0 0 2px #ffffff;
-    margin-bottom: 0;
+    padding: 0;
 }
 
   .pages-subtitle-text {
@@ -51,7 +53,8 @@
     letter-spacing: .30px;
     text-align: center;
     text-shadow: 0 0 1px #ffffff, 0 0 2px #ffffff;
-  
+    margin: 0;
+    padding: 0;
 }
 
   .page-content {
@@ -60,145 +63,10 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-self: center;
+    align-self: start;
     align-items: center;
     padding: 0;
     margin: 0;
+    border: 1px solid rgba(162, 38, 38, 0.861);
   }
 
-  .editor {
-    border: 1px solid black;
-    background-color: bisque;
-    width: 95%;
-    height: 90%;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-self: center;
-    align-items: center;
-    padding: 5px;
-    margin: 0;
-    }
-
-    .editor-header {
-        height: 45px;
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        align-self: center;
-        align-items: center;
-        margin: 0;
-        padding: 0;
-    }
-
-    .editor-button {
-    }
-
-    .editor-header-button {
-        border: none;
-        cursor: pointer;
-        display: flex;
-        justify-content: center;
-        align-self: center;
-        align-items: center;
-        margin: 0 10px;
-    }
-
-    .editor-button-image {
-    }
-
-    .header-button-image {
-        width: 33px;
-        height: 33px;
-        object-fit: fill;
-    }
-
-
-    .editor-board {
-        border: 1px solid black;
-        background-color: rgb(184, 134, 72);
-        width: 90%;
-        height: 45%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: start;
-        align-self: center;
-        padding: 0;
-        margin: 0;
-        border-radius: 16px
-    }
-
-    .editor-board-header {
-        background-color: rgb(255, 140, 0);
-        height: 35px;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-self: center;
-        align-items: center;
-        margin: 0;
-        padding: 0;
-        border-radius: 16px
-    }
-
-    .active-editor .editor-board-header {
-        justify-content: space-evenly;
-        display: flex;
-    }
-
-    .active-editor .save-button, .active-editor .cancel-button {
-        display: flex;
-    }
-
-    .active-editor .edit-button {
-        display: none;
-    }
-    
-    .disabled-editor:not(.not-foucsed-editor) .editor-board-header {
-        justify-content: space-evenly;
-        display: flex;
-    }
-
-    .disabled-editor:not(.not-foucsed-editor) .edit-button { 
-        display: flex;
-    }
-
-    .disabled-editor:not(.not-foucsed-editor) .save-button , .disabled-editor:not(.not-foucsed-editor) .cancel-button { 
-        display: none;
-    }
-
-    .board-header-button {
-        border: none;
-        cursor: pointer;
-        display: flex;
-        justify-content: center;
-        align-self: center;
-        align-items: center;
-        margin: 0 30px;
-    }
-
-    .active-editor .board-header-button  {
-    }
-    
-    .disabled-editor .board-header-button {
-    }
-
-    .board-button-image {
-        width: 25px;
-        height: 25px;
-        object-fit: fill;
-    }
-
-    .foucsed-editor .editor-board-header {
-        background-color: rgb(43, 255, 0);
-    }
-
-    .not-foucsed-editor .editor-board-header {
-        background-color: rgb(255, 140, 0);
-    }
-
-    .editor-board-content {
-        
-    }

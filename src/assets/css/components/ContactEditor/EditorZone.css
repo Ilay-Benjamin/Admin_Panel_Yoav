@@ -1,0 +1,112 @@
+.editor-editzone {
+     background-color: peachpuff;
+     width: 95%;
+     height: 95%;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: start;
+     align-self: center;
+     margin: 0;
+     padding: 0;
+}
+
+.editzone-title {
+     background-color: rgb(255, 140, 0);
+     text-decoration: underline;
+     height: 38px;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-items: center;
+     align-content: start;
+     justify-items: start;
+     color: rgb(0, 0, 0);
+     font-size: 14px;
+     margin: 0;
+     padding: 0;
+     overflow: hidden;
+     transition: max-height 0.5s ease-out;
+}
+
+.editzone-title-text {
+     font-weight: bolder;
+     color: black;
+     font-size: 16px;
+     font-family: Roboto, "helvetica neue", sans-serif;
+     text-overflow: ellipsis;
+     transition: opacity .3s cubic-bezier(0.4, 0, 0.2, 1);
+     white-space: nowrap;
+     overflow: hidden;
+     cursor: pointer;
+     letter-spacing: .30px;
+     text-align: center;
+     text-shadow: 0 0 1px #ffffff, 0 0 2px #ffffff;
+     margin: 0;
+     padding: 0;
+}
+
+
+.editzone-content {
+     background-color: rgb(12, 255, 178);
+     width: 100%;
+     height: 100%;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     align-self: center;
+     padding-top: 10px;
+     margin: 0;
+     border-radius: 0 0 18px 18px;
+     overflow-y: auto;
+}
+
+.editorzone-datafields-row {
+     width: 100%;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-around;
+     align-items: center;
+     align-self: center;
+     padding: 0;
+     margin-top: 10px;
+     margin-bottom: 10px;
+}
+
+.datafield-label {
+     background-color: rgb(255, 140, 0);
+     font-weight: bolder;
+     color: black;
+     font-size: 16px;
+     font-family: Roboto, "helvetica neue", sans-serif;
+     text-overflow: ellipsis;
+     transition: opacity .3s cubic-bezier(0.4, 0, 0.2, 1);
+     white-space: nowrap;
+     overflow: hidden;
+     cursor: pointer;
+     letter-spacing: .30px;
+     display: flex;
+     justify-content: center;
+     text-align: center;
+     text-shadow: 0 0 1px #ffffff, 0 0 2px #ffffff;
+     margin: 0;
+     padding: 0;
+}
+
+.datafield-input {
+     font-weight: bolder;
+     color: black;
+     font-size: 16px;
+     font-family: Roboto, "helvetica neue", sans-serif;
+     text-overflow: ellipsis;
+     transition: opacity .3s cubic-bezier(0.4, 0, 0.2, 1);
+     white-space: nowrap;
+     overflow: hidden;
+     cursor: pointer;
+     letter-spacing: .30px;
+     text-align: center;
+     text-shadow: 0 0 1px #ffffff, 0 0 2px #ffffff;
+     margin: 0;
+     padding: 0;
+}

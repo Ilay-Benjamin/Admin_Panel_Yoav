@@ -1,0 +1,59 @@
+
+.editor-board {
+     background-color: rgb(184, 134, 72);
+     width: 90%;
+     height: 55%;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: start;
+     align-self: center;
+     padding: 0;
+     margin: 0;
+     border-radius: 18px;
+ }
+
+ .editor-board-header {
+     background-color: rgb(255, 140, 0);
+     height: 35px;
+     width: 100%;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-self: center;
+     align-items: center;
+     margin: 0;
+    padding: 0;
+    border-radius: 18px 18px 0 0 ;
+ }
+
+ .board-header-button {
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    margin: 5px 35px;
+}
+
+.board-button-image {
+    width: 25px;
+    height: 25px;
+    object-fit: fill;
+}
+
+
+.editor-board-content {
+    background-color:violet;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    padding: 0;
+    margin: 0;
+    border-radius: 0 0 18px 18px;
+
+}

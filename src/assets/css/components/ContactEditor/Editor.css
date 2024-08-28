@@ -1,0 +1,95 @@
+.editor {
+    border: 1px solid black;
+    width: 95%;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-self: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.editor-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.editor-button {}
+
+.editor-header-button {
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    margin: 10px 0;
+    padding: 0;
+}
+
+.editor-button-image {}
+
+.header-button-image {
+    width: 33px;
+    height: 33px;
+    object-fit: fill;
+}
+
+.editor-content {
+    width: 95%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-self: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.active-editor .editor-board-header {
+    justify-content: space-evenly;
+    display: flex;
+}
+
+.active-editor .save-button,
+.active-editor .cancel-button {
+    display: flex;
+}
+
+.active-editor .edit-button {
+    display: none;
+}
+
+.disabled-editor:not(.not-foucsed-editor) .editor-board-header {
+    justify-content: space-evenly;
+    display: flex;
+}
+
+.disabled-editor:not(.not-foucsed-editor) .edit-button {
+    display: flex;
+}
+
+.disabled-editor:not(.not-foucsed-editor) .save-button,
+.disabled-editor:not(.not-foucsed-editor) .cancel-button {
+    display: none;
+}
+
+.active-editor .board-header-button {}
+
+.disabled-editor .board-header-button {}
+
+.foucsed-editor .editor-board-header {
+    background-color: rgb(43, 255, 0);
+}
+
+.not-foucsed-editor .editor-board-header {
+    background-color: rgb(255, 140, 0);
+}

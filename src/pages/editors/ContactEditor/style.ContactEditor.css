@@ -19,13 +19,11 @@
     flex-direction: column;
     align-self: center;
     font-size: 28px;
-    padding: 30px 0 30px 0;
+    padding: 30px 0 0 0;
     margin: 0;
-    background-color: rgb(255, 140, 0);
 }
 
   .page-title-text {
-    background-color: beige;
     color: black;
     font-size: 25px;
     font-family: Roboto, "helvetica neue", sans-serif;
@@ -63,13 +61,11 @@
     height: calc(100% - 1px - 95px);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: start;
     align-self: center;
-    padding: 10px 0 10px 0;
+    align-items: center;
+    padding: 0 0 10px 0;
     margin: 0;
-    border: 1px solid rgba(162, 38, 38, 0.861);
-    background-color: cadetblue;
-    overflow: auto;
+    overflow: hidden;
   }
 

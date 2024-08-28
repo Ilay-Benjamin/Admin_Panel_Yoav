@@ -1,24 +1,25 @@
 .dataview-department {
      background-color: rgb(184, 134, 72);
      width: 90%;
-     height: 55%;
+     height: 100%;
+     max-height: 280px;
      display: flex;
      flex-direction: column;
      align-items: center;
      justify-content: start;
      align-self: center;
+     margin: 15px 0 15px 0;
      padding: 0;
-     margin: 0;
      border-radius: 18px;
 }
 
 .dataview-department-header {
      background-color: rgb(255, 140, 0);
-     height: 35px;
-     width: 95%;
+     height: 45px;
+     width: 100%;
      display: flex;
      flex-direction: row;
-     justify-content: space-between;
+     justify-content: space-around;
      align-self: center;
      align-items: center;
      margin: 0;
@@ -28,8 +29,8 @@
 
 .department-header-title {
      display: flex;
-     flex-direction: row;
-     justify-content: space-between;
+     flex-direction: column;
+     justify-content: start;
      align-self: center;
      align-items: center;
      text-align: center;
@@ -40,7 +41,7 @@
 .department-header-title-text {
      font-weight: bolder;
      color: black;
-     font-size: 20px;
+     font-size: 16px;
      font-family: Roboto, "helvetica neue", sans-serif;
      text-overflow: ellipsis;
      transition: opacity .3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -61,17 +62,20 @@
      justify-content: center;
      align-self: center;
      align-items: center;
-     margin: 5px 35px;
+     margin: 0;
 }
 
 .department-button-image {
      width: 23px;
      height: 23px;
      object-fit: fill;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+     border-radius: 25%;      
 }
 
 .department-content {
-     width: 95%;
+     width: 100%;
+     height: 100%;
      display: flex;
      flex-direction: column;
      align-items: center;
@@ -82,8 +86,10 @@
      border-radius: 0 0 18px 18px;
 }
 
+
 .department-items {
-    width: 80%;
+    width: 100%;
+     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -92,39 +98,56 @@
     margin: 0;
     padding: 0;
     border-radius: 0 0 18px 18px;
-
 }
 
 .department-item {
-    height: 55px;
-    width: 95%;
+     width: 90%;
+    height: 60px;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: space-around;
     align-self: center;
     align-items: center;
-    margin: 0;
-    padding: 0;
-    border: 1px solid black;
+    padding: 5px 0 5px 0;
+     margin: 0;
+    border-bottom: 1px solid rgb(204, 164, 83);
 }
+
 
 .department-item-header {
      background-color: rgb(219, 168, 106);
      display: flex;
-     flex-direction: row;
-     justify-content: space-between;
+     flex-direction: column;
+     justify-content: center;
      align-self: center;
      align-items: center;
-     text-align: center;
      margin: 0;
      padding: 0;
-     text-decoration: underline;
 }
 
+.section-chapter:nth-child(1 of div.section-chapter) {
+     border-radius: 15px 15px 0 0;
+   }
+   
+   .section-chapter~.section-chapter {
+     border-radius: 0 0 0 0;
+   }
+   
+   .section-chapter:last-of-type {
+     border-radius: 0 0 15px 15px;
+   }
+
 .item-header-text {
+     max-width: 220px;
+     min-width: 150px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-self: center;
+     border: 1px solid rgb(219, 168, 106);
      font-weight: bolder;
      color: black;
-     font-size: 20px;
+     font-size: 17px;
      font-family: Roboto, "helvetica neue", sans-serif;
      text-overflow: ellipsis;
      transition: opacity .3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -134,7 +157,7 @@
      letter-spacing: .30px;
      text-align: center;
      margin: 0;
-     padding: 0;
+     padding: 4px 5px 4px 5px;
 }
 
 .department-item-content {
@@ -145,12 +168,12 @@
      justify-content: center;
      align-self: center;
      padding: 0;
-     margin-top: 5px;
+     margin: 0;
 }
 
 .item-content-text{
      color: black;
-     font-size: 20px;
+     font-size: 17px;
      font-family: Roboto, "helvetica neue", sans-serif;
      text-overflow: ellipsis;
      transition: opacity .3s cubic-bezier(0.4, 0, 0.2, 1);

@@ -97,17 +97,15 @@ function Editor(props) {
                          changes={changes}
                          setChanges={onChangeItem} 
                     />
-                    <br></br><br></br>
-                    <DataView
-                         toggleEditor={onToggleEditor}
-                         setFocusedEditor={onFocuseOnItem}
-                         isEditorDisabled={isEditorDisabled} 
-                         focusedEditor={focusedEditor}
-                    /> 
-                              
+                    <div className='editor-data'>
+                         <DataView
+                              toggleEditor={onToggleEditor}
+                              setFocusedEditor={onFocuseOnItem}
+                              isEditorDisabled={isEditorDisabled} 
+                              focusedEditor={focusedEditor}
+                         /> 
+                    </div>
                </div>
-
-
 
           </div>
      );

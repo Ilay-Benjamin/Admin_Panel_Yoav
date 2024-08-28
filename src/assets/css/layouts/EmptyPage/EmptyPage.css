@@ -15,7 +15,7 @@
     flex-direction: column;
     justify-content: start;
     align-self: center;
-    overflow-y: hidden;
+    overflow: hidden;
 }
 .sidebar {
     padding-top: 3px;
@@ -60,6 +60,7 @@
     border: 1px solid black;
     padding-top: 3px;
     padding-bottom: 3px;
+    overflow: auto;
 }
 
 /* pages/Home/style.Home.css */

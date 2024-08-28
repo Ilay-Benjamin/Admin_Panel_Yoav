@@ -90,8 +90,6 @@
     flex-direction: column;
     align-self: center;
     justify-content: start;
-    overflow-y: auto;
-    overflow-x: hidden;
     margin: 0;
     padding: 0;
 }

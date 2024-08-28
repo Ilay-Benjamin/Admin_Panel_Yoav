@@ -14,7 +14,6 @@
  }
 
  .editor-board-header {
-     background-color: rgb(255, 140, 0);
      height: 35px;
      width: 100%;
      display: flex;
@@ -67,4 +66,25 @@
     align-self: center;
     margin: 0;
     border-radius: 0 0 18px 18px;
+}
+
+
+.active-editor .editor-board-header {
+    justify-content: space-evenly;
+    display: flex;
+}
+
+.active-editor .save-button,
+.active-editor .cancel-button {
+    display: flex;
+}
+
+.disabled-editor .editor-board-header {
+    justify-content: space-between;
+    display: flex;
+}
+
+.disabled-editor .save-button,
+.disabled-editor .cancel-button {
+    display: none;
 }

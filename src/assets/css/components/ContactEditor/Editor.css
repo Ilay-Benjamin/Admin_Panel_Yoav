@@ -38,7 +38,6 @@
     width: 28px;
     height: 28px;
     object-fit: fill;
-    display: inline;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 25%;
 }
@@ -69,55 +68,66 @@
 }
 
 .editor-data {
-    background-color: rgb(240, 141, 141);
     width: 99%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     align-self: center;
-    padding: 5px;
-    margin: 40px 0 15px 0;
+    padding: 0;
+    margin: 40px 0 0 0;
     border-radius: 0 0 18px 18px;
 
 }
 
-.active-editor .editor-board-header {
-    justify-content: space-evenly;
+
+.enabled-editor .editor-board-header {
+    background-color: rgb(28, 214, 214);
+}
+
+.enabled-editor .editor-board-header {
+    justify-content: space-between;
     display: flex;
 }
 
-.active-editor .save-button,
-.active-editor .cancel-button {
-    display: flex;
-}
-
-.active-editor .edit-button {
+.enabled-editor .edit-button {
     display: none;
 }
 
-.disabled-editor:not(.not-foucsed-editor) .editor-board-header {
-    justify-content: space-evenly;
+.enabled-editor .save-button, 
+.enabled-editor .cancel-button {
     display: flex;
 }
 
-.disabled-editor:not(.not-foucsed-editor) .edit-button {
-    display: flex;
+
+.disabled-editor:not(.focused-editor) .editor-board-header {
+    background-color: rgb(117, 245, 101);
 }
 
-.disabled-editor:not(.not-foucsed-editor) .save-button,
-.disabled-editor:not(.not-foucsed-editor) .cancel-button {
+.disabled-editor:not(.focused-editor) .editor-board-header {
+}
+
+.disabled-editor:not(.focused-editor) .save-button,
+.disabled-editor:not(.focused-editor) .cancel-button,
+.disabled-editor:not(.focused-editor) .edit-button {
     display: none;
 }
 
-.active-editor .board-header-button {}
 
-.disabled-editor .board-header-button {}
-
-.foucsed-editor .editor-board-header {
-    background-color: rgb(43, 255, 0);
-}
-
-.not-foucsed-editor .editor-board-header {
+.disabled-editor:not(.not-focused-editor) .editor-board-header {
     background-color: rgb(255, 140, 0);
+}
+
+.disabled-editor:not(.not-focused-editor) .editor-board-header {
+    display: flex;
+    justify-content: center;
+}
+
+.disabled-editor:not(.not-focused-editor) .save-button,
+.disabled-editor:not(.not-focused-editor) .cancel-button {
+    display: none;
+}
+
+.disabled-editor:not(.not-focused-editor) .edit-button {
+    display: flex;
 }

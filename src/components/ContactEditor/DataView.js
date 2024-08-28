@@ -27,7 +27,7 @@ function getDataViewClassNames() {
 function DataView(props) {
      var isEditorDisabled = props.isEditorDisabled;
      var focusedEditor = props.focusedEditor;
-     var setFocusedEditor = props.focuseOnItem;
+     var setFocusedEditor = props.setFocusedEditor;
      var toggleEditor = props.toggleEditor;
 
      var departments = (contactEditorConfig.departmentsObject);

@@ -26,7 +26,7 @@ function getDepartmentViewClassNames() {
  export default function DepartmentView(props) {
    var isEditorDisabled = props.isEditorDisabled;
    var focusedEditor = props.focusedEditor;
-   var setFocusedEditor = props.focuseOnItem;
+   var setFocusedEditor = props.setFocusedEditor;
    var toggleEditor = props.toggleEditor;
 
    var department = props.department;
@@ -34,15 +34,13 @@ function getDepartmentViewClassNames() {
 
    var isDepartmentItemOnFocus = props.isDepartmentItemOnFocus;
 
-
-
    return (
       <div className={getDepartmentViewClassNames()}>
          <div className='dataview-department-header'>
-            <div className={classNames('department-header-button', 'edit-button')}>
+            <div className={classNames('department-header-button', 'edit-department-button')}>
                <img src={editIcon} className={classNames('department-button-image')} alt=""></img>
             </div>
-            <div className={classNames('department-header-button', 'add-button')}>
+            <div className={classNames('department-header-button', 'add-item-button')}>
                <img src={addContactIcon} className={classNames('department-button-image')} alt=""></img>
             </div>
             <div className={classNames('department-header-title')}>
@@ -64,6 +62,7 @@ function getDepartmentViewClassNames() {
                      setFocusedEditor={setFocusedEditor}
                      toggleEditor={toggleEditor}
                      isItemOnFocus={isDepartmentItemOnFocus && focusedEditor !== null && focusedEditor !== -1 && focusedEditor.name === item.name}
+                     isLastItem={index === department.items.length - 1}
                   />
                ))}
             </div>
@@ -77,7 +76,7 @@ function getDepartmentViewClassNames() {
 export function DepartmentItem(props) {
    var isEditorDisabled = props.isEditorDisabled;
    var focusedEditor = props.focusedEditor;
-   var setFocusedEditor = props.focuseOnItem;
+   var setFocusedEditor = props.setFocusedEditor;
    var toggleEditor = props.toggleEditor;
    var item = props.item;
    var itemIndex = props.itemIndex;
@@ -89,14 +88,14 @@ export function DepartmentItem(props) {
    ));
 
    return (
-      <div className={ItemViewClassNames}>
+      <div className={ItemViewClassNames} onClick={(target) => setFocusedEditor(target, Item.fromObject(item), itemIndex)}>
          
          <div className='department-item-header'>
             <p className={classNames('item-header-text')}>
-               ({itemIndex}) {item.rule} 
+               ({itemIndex + 1}) {item.rule} 
             </p>
          </div>
-
+         <div className='department-item-separator'></div> 
          <div className='department-item-content'>
             <p className='item-content-text'>
             {item.name}: {item.phone}.

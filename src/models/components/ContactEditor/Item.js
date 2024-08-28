@@ -78,8 +78,8 @@ export default class Item {
      set departmentName(departmentName) {
           this._departmentName = departmentName;
      }
-     static clone() {
-          return new Item(this._name, this._rule, this._phone, this._departmentName);
+     static clone(item) {
+          return new Item(item.name, item.rule, item.phone, item.departmentName);
      }
      equals(item) {
           return this._name === item.name && this._rule === item.rule && this._phone === item.phone && this._departmentName === item.departmentName;

@@ -21,7 +21,7 @@ import '../../assets/css/components/ContactEditor/Editor.css';
 function getContactEditorClassNames(isEditorDisabled, isEditorFocused) {
      return classNames(
           'editor',
-          (isEditorDisabled ? 'disabled-edior' : 'enabled-editor'),
+          (isEditorDisabled ? 'disabled-editor' : 'enabled-editor'),
           (isEditorFocused ? 'focoused-editor' : 'not-focused-editor')
      );
 }
@@ -57,15 +57,19 @@ function Editor(props) {
                     )
                )
                alert('Editor is enabled');
+               setIsEditorDisabled(!isEditorDisabled);
           }
      }
 
-     var onFocuseOnItem = (target, item) => {
+     var onFocuseOnItem = (target, item, itemIndex) => {
           target.preventDefault();
           if (!isEditorDisabled) {
                alert('Cannot focus on item when editor is enabled');
           } else {
-               if (focusedEditor === item) {
+               if (focusedEditor === null) {
+                    setFocusedEditor(item);
+                    alert('Focused item is set to ' + item);
+               } else if (focusedEditor.equals(item)) {
                     setFocusedEditor(null);
                     alert('Focused item is set to null');
                } else {
@@ -89,6 +93,17 @@ function Editor(props) {
                </div>
 
                <div className='editor-content'>
+               <pre>
+                    <p>FocusedEditor:</p>
+                    {JSON.stringify(focusedEditor, null, 2)}
+                    <br></br><br></br>
+                    <p>Changes:</p>
+                    {JSON.stringify(changes, null, 2)}
+                    <br></br><br></br>
+                    <p>Editor ClassNames:</p>
+                    {getContactEditorClassNames(isEditorDisabled, focusedEditor)}
+                    <br></br><br></br>
+               </pre>
                     <Board 
                          toggleEditor={onToggleEditor}
                          setFocusedEditor={onFocuseOnItem}

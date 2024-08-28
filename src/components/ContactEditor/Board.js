@@ -25,24 +25,26 @@ function getBoardClassNames() {
 function Board(props) {
    var isEditorDisabled = props.isEditorDisabled;
    var focusedEditor = props.focusedEditor;
-   var setFocusedEditor = props.focuseOnItem;
+   var setFocusedEditor = props.setFocusedEditor;
    var toggleEditor = props.toggleEditor;
+   var changes = props.changes;
+   var setChanges = props.setChanges;
 
    return (
       <div className='editor-board'>
          <div className='editor-board-header'>
-            <div className={classNames('board-header-button', 'save-button')}>
+            <div className={classNames('board-header-button', 'save-button')} >
                <img src={saveIcon} className={classNames('board-button-image')} alt=""></img>
             </div>
-            <div className={classNames('board-header-button', 'edit-button')}>
+            <div className={classNames('board-header-button', 'edit-button')} onClick={(target) => toggleEditor(target)}>
                <img src={editIcon} className={classNames('board-button-image')} alt=""></img>
             </div>
-            <div className={classNames('board-header-button', 'cancel-button')}>
+            <div className={classNames('board-header-button', 'cancel-button')} onClick={(target) => toggleEditor(target)}>
                <img src={cancleIcon} className={classNames('board-button-image')} alt=""></img>
             </div>
          </div>
          <div className='editor-board-content'>
-            <EditorZone setFocusedEditor={setFocusedEditor} toggleEditor={toggleEditor} isEditorDisabled={isEditorDisabled} focusedEditor={focusedEditor} /> 
+            <EditorZone changes={changes} setChanges={setChanges} setFocusedEditor={setFocusedEditor} toggleEditor={toggleEditor} isEditorDisabled={isEditorDisabled} focusedEditor={focusedEditor} /> 
          </div>
       </div>
    );

@@ -15,7 +15,7 @@
 .dataview-department-header {
      background-color: rgb(255, 140, 0);
      height: 35px;
-     width: 100%;
+     width: 95%;
      display: flex;
      flex-direction: row;
      justify-content: space-between;
@@ -71,7 +71,7 @@
 }
 
 .department-content {
-     width: 100%;
+     width: 95%;
      display: flex;
      flex-direction: column;
      align-items: center;
@@ -140,7 +140,7 @@
 }
 
 .department-item-content {
-     width: 100%;
+     width: 95%;
      display: flex;
      flex-direction: column;
      align-items: center;

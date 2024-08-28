@@ -16,12 +16,12 @@ import addContactIcon from '../../assets/images/icons/add-contact.png';
 import '../../assets/css/components/ContactEditor/DataView.css';
 
 
+
 function getDataViewClassNames() {
      return classNames(
           'editor-dataview',
      );
 }
-
 
 
 function DataView(props) {
@@ -36,8 +36,8 @@ function DataView(props) {
      return (
           <div className={getDataViewClassNames()}>
                <div className='dataview-header'>
-                    <p>
-                         <strong>Departments</strong>
+                    <p className="dataview-header-text">
+                         <strong>מחלקות</strong>
                     </p>
                </div>
                <div className='dataview-content'>

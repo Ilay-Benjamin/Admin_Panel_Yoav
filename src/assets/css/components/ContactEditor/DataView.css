@@ -1,0 +1,51 @@
+.editor-dataview {
+     width: 90%;
+     height: auto;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: start;
+     align-self: center;
+     padding: 0;
+     margin: 0;
+     border-radius: 18px;
+}
+
+.dataview-header {
+     text-decoration: underline;
+     height: 38px;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-items: center;
+     align-content: start;
+     justify-items: start;
+     color: rgb(0, 0, 0);
+     font-size: 14px;
+     margin: 0;
+     padding: 0;
+     overflow: hidden;
+     transition: max-height 0.5s ease-out;
+}
+
+.dataview-header-text {
+     font-weight: bolder;
+     color: black;
+     font-size: 18px;
+     font-family: Roboto, "helvetica neue", sans-serif;
+     text-overflow: ellipsis;
+     transition: opacity .3s cubic-bezier(0.4, 0, 0.2, 1);
+     white-space: nowrap;
+     overflow: hidden;
+     cursor: pointer;
+     letter-spacing: .30px;
+     text-align: center;
+     text-shadow: 0 0 1px #ffffff, 0 0 2px #ffffff;
+     margin: 0;
+     padding: 0;
+}
+
+.dataview-content {
+
+     padding: 50px;
+}

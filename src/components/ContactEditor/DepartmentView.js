@@ -23,7 +23,7 @@ function getDepartmentViewClassNames() {
 }
 
 
-export default function DepartmentView(props) {
+ export default function DepartmentView(props) {
    var isEditorDisabled = props.isEditorDisabled;
    var focusedEditor = props.focusedEditor;
    var setFocusedEditor = props.focuseOnItem;
@@ -46,7 +46,7 @@ export default function DepartmentView(props) {
                <img src={addContactIcon} className={classNames('department-button-image')} alt=""></img>
             </div>
             <div className={classNames('department-header-title')}>
-               <p className='department-header-title-text'><strong>{departmentIndex}.</strong> {department.name}</p>
+               <p className='department-header-title-text'><strong>({departmentIndex})</strong> {department.name}</p>
             </div>
             <div className={classNames('department-header-button', 'delete-button')}>
                <img src={deleteIcon} className={classNames('department-button-image')} alt=""></img>
@@ -93,13 +93,13 @@ export function DepartmentItem(props) {
          
          <div className='department-item-header'>
             <p className={classNames('item-header-text')}>
-               <strong>({itemIndex}) {item.rule} </strong>
+               ({itemIndex}) {item.rule} 
             </p>
          </div>
 
          <div className='department-item-content'>
             <p className='item-content-text'>
-               {item.name}: {item.phone}.
+            {item.name}: {item.phone}.
             </p>
          </div>
 

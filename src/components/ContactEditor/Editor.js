@@ -82,7 +82,6 @@ function Editor(props) {
 
      return (
           <div className={getContactEditorClassNames(isEditorDisabled, focusedEditor)}>
-               
                <div className='editor-header'>
                     <div className={classNames('editor-button', 'editor-header-button')}>
                          <img src={addDepartmentIcon} className={classNames('editor-button-image', 'header-button-image')} alt=""></img>
@@ -108,9 +107,7 @@ function Editor(props) {
                               
                </div>
 
-               <pre>
-                     {JSON.stringify({ isEditorDisabled, focusedEditor }, null, 2)}
-               </pre>
+
 
           </div>
      );

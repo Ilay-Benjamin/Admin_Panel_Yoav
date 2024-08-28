@@ -15,9 +15,9 @@ import '../../assets/css/components/ContactEditor/EditorZone.css';
 
 
 function getEditorZoneClassNames() {
-    return classNames(
-        'editor-editzone',
-    );
+     return classNames(
+          'editor-editzone',
+     );
 }
 
 
@@ -53,94 +53,84 @@ function EditorZone(props) {
           setChanges(target, changedItem);
      }
 
-    return (
-     <div className={getEditorZoneClassNames()}>
-          <div className='editzone-title'>
-               <p className='editzone-title-text'>פרטי איש קשר</p>
-          </div>
-          <div className='editzone-content'>
+     var title = 'פרטי איש קשר';
+     title += focusedEditor == null ? '' : (focusedEditor === -1 ? ' (חדש)' : ' (' + focusedEditor.index + ')');
 
-               <div className='editorzone-datafields-row'>
-                    <div className='editzone-datafield'>
-                         <label 
-                              for='index-input'
-                              className='datafield-label'>
-                                   אינדקס
-                         </label>
-                         <input 
-                              name='index-input'
-                              className="datafield-input" 
-                              type='text' 
-                              value=''
-                              placeholder='אינדקס'
-                              disabled='true'
-                         />
-                    </div>
-                    <div className='editzone-datafield'>
-                         <label 
-                              for='departmentName-input'
-                              className='datafield-label'>
-                                   מחלקה
-                         </label>
-                         <input 
-                              name='departmentName-input'
-                              className="datafield-input" 
-                              type='text' 
-                              value=''
-                              placeholder='מחלקה'
-                              disabled='true'
-                         />
-                    </div>
+     return (
+          <div className={getEditorZoneClassNames()}>
+               <div className='editzone-title'>
+                    <p className='editzone-title-text'>{title}</p>
                </div>
+               <div className='editzone-content'>
 
-               <div className='editorzone-datafields-row'>
-                    <div className='editzone-datafield'>
-                         <label 
-                              for='rule-input'
-                              className='datafield-label'>
+                    <div className='editorzone-datafields-row'>
+
+                         <div className='editzone-datafield'>
+                              <label
+                                   for='rule-input'
+                                   className='datafield-label'>
                                    תפקיד
-                         </label>
-                         <input 
-                              name='rule-input'
-                              className="datafield-input" 
-                              type='text' 
-                              placeholder='תפקיד'
-                         />
-                    </div>
-                    <div className='editzone-datafield'>
-                         <label 
-                         for='name-input'
-                         className='datafield-label'>
-                              שם מלא
-                         </label>
-                         <input 
-                         name='name-input'
-                         className="datafield-input" 
-                         type='text' 
-                         placeholder='שם'
-                         />
-                    </div>
-               </div>
-               
-               <div className='editorzone-datafields-row'>
-                    <div className='editzone-datafield'>
-                         <label 
-                         for='phone-input'
-                         className='datafield-label'>
-                              מס' טלפון
-                         </label>
-                         <input 
-                         name='phone-input'
-                         className="datafield-input" 
-                         type='phone'
-                         placeholder='טלפון'
-                         />
-                    </div>
-               </div>
+                              </label>
+                              <input
+                                   name='rule-input'
+                                   className="datafield-input"
+                                   type='text'
+                                   placeholder='תפקיד'
+                              />
+                         </div>
 
+                         <div className='editzone-datafield'>
+                              <label
+                                   for='departmentName-input'
+                                   className='datafield-label'>
+                                   מחלקה
+                              </label>
+                              <input
+                                   name='departmentName-input'
+                                   className="datafield-input"
+                                   type='text'
+                                   value=''
+                                   placeholder='מחלקה'
+                                   disabled='true'
+                              />
+                         </div>
+
+                    </div>
+
+                    <div className='editorzone-datafields-row'>
+
+                         <div className='editzone-datafield'>
+                              <label
+                                   for='name-input'
+                                   className='datafield-label'>
+                                   שם מלא
+                              </label>
+                              <input
+                                   name='name-input'
+                                   className="datafield-input"
+                                   type='text'
+                                   placeholder='שם'
+                              />
+                         </div>
+                         <div className='editzone-datafield'>
+                              <label
+                                   for='phone-input'
+                                   className='datafield-label'>
+                                   מס' טלפון
+                              </label>
+                              <input
+                                   name='phone-input'
+                                   className="datafield-input"
+                                   type='phone'
+                                   placeholder='טלפון'
+                              />
+                         </div>
+
+                    </div>
+
+               </div>
           </div>
-     </div>
-    );
+     );
 }
 
 export default EditorZone;

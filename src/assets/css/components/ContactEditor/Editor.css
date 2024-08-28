@@ -42,15 +42,18 @@
 }
 
 .editor-content {
+    background-color: aqua;
     width: 95%;
     height: 95%;
     display: flex;
     flex-direction: column;
     justify-content: start;
-    align-self: center;
     align-items: center;
+    align-self: center;
     padding: 0;
-    margin: 0;
+    margin: 5px 0 10px 0;
+    padding: 0;
+    border-radius: 0 0 18px 18px;
 }
 
 .active-editor .editor-board-header {

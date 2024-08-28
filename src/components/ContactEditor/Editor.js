@@ -93,17 +93,6 @@ function Editor(props) {
                </div>
 
                <div className='editor-content'>
-               <pre>
-                    <p>FocusedEditor:</p>
-                    {JSON.stringify(focusedEditor, null, 2)}
-                    <br></br><br></br>
-                    <p>Changes:</p>
-                    {JSON.stringify(changes, null, 2)}
-                    <br></br><br></br>
-                    <p>Editor ClassNames:</p>
-                    {getContactEditorClassNames(isEditorDisabled, focusedEditor)}
-                    <br></br><br></br>
-               </pre>
                     <Board 
                          toggleEditor={onToggleEditor}
                          setFocusedEditor={onFocuseOnItem}

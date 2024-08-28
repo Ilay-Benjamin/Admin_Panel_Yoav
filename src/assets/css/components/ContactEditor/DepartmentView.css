@@ -40,7 +40,7 @@
 .department-header-title-text {
      font-weight: bolder;
      color: black;
-     font-size: 17px;
+     font-size: 18px;
      font-family: Roboto, "helvetica neue", sans-serif;
      text-overflow: ellipsis;
      transition: opacity .3s cubic-bezier(0.4, 0, 0.2, 1);

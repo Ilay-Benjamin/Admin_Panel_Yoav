@@ -92,7 +92,7 @@ export function DepartmentItem(props) {
          
          <div className='department-item-header'>
             <p className={classNames('item-header-text')}>
-               ({itemIndex + 1}) {item.rule} 
+               ({( parseInt(itemIndex) + 1)}) {item.rule} 
             </p>
          </div>
          <div className='department-item-separator'></div> 

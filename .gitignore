@@ -1,3 +1,4 @@
 node_modules/
-config/app/app.config.json
-config/global/global.config.json
+src/config/app/app.config.json
+src/config/global/global.config.json
+src/config/

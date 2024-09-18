@@ -101,7 +101,7 @@ export default function EditorZone(props) {
 
                          <div className='editzone-datafield'>
                               <label
-                                   for='rule-input'
+                                   htmlFor='rule-input'
                                    className='datafield-label'>
                                    תפקיד
                               </label>
@@ -117,7 +117,7 @@ export default function EditorZone(props) {
                          </div>
                          <div className='editzone-datafield'>
                               <label
-                                   for='departmentName-input'
+                                   htmlFor='departmentName-input'
                                    className='datafield-label'>
                                    מחלקה
                               </label>
@@ -127,7 +127,7 @@ export default function EditorZone(props) {
                                    type='text'
                                    value={getDatafieldValue('departmentName')}
                                    placeholder='מחלקה'
-                                   disabled='true'
+                                   disabled={true}
                               />
                          </div>
 
@@ -137,7 +137,7 @@ export default function EditorZone(props) {
 
                          <div className='editzone-datafield'>
                               <label
-                                   for='name-input'
+                                   htmlFor='name-input'
                                    className='datafield-label'>
                                    שם מלא
                               </label>
@@ -153,7 +153,7 @@ export default function EditorZone(props) {
                          </div>
                          <div className='editzone-datafield'>
                               <label
-                                   for='phone-input'
+                                   htmlFor='phone-input'
                                    className='datafield-label'>
                                    מס' טלפון
                               </label>
